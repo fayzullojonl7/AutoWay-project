@@ -1,0 +1,316 @@
+{
+  "data": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "Cars",
+        "categoryImage": "/images/pages/home/categories/carsCat.png",
+        "brands": [
+          {
+            "brandId": 1,
+            "brand": "BMW",
+            "brandLogo": "/images/pages/home/brands/BMW-logo.png",
+            "models": [
+              {
+                "id": 1,
+                "name": "M2",
+                "prevImg": "/images/pages/home/models/BMW/M2.png",
+                "vehicles": [
+                  {
+                    "id": 1,
+                    "cardCover": "https://i.pinimg.com/1200x/39/f3/22/39f322cca6ca75780331dd0151e9ca28.jpg",
+                    "name": "BMW M2",
+                    "year": "2018",
+                    "fuelType": "Petrrol",
+                    "description": "porty coupe with excellent handling",
+                    "gearBox": "Robot",
+                    "price": "$20000",
+                    "mialage": "12000",
+                    "carImages": [],
+                    "isSold": false,
+                    "color": "black"
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "M3",
+                "prevImg": "/images/pages/home/models/BMW/M3.png",
+                "vehicles": []
+              },
+              {
+                "id": 3,
+                "name": "M4",
+                "prevImg": "/images/pages/home/models/BMW/M4.png",
+                "vehicles": []
+              },
+              {
+                "id": 4,
+                "name": "M5",
+                "prevImg": "/images/pages/home/models/BMW/M5.png",
+                "vehicles": []
+              }
+            ]
+          },
+          {
+            "brandId": 2,
+            "brand": "Opel",
+            "brandLogo": "/images/pages/home/brands/OPEL-logo.png",
+            "models": [
+              { "id": 1, "name": "Astra", "images": [] },
+              { "id": 2, "name": "Vectra", "images": [] },
+              { "id": 3, "name": "Insignia", "images": [] }
+            ]
+          },
+          {
+            "brandId": 3,
+            "brand": "Mercedes-Benz",
+            "brandLogo": "/images/pages/home/brands/MERC-logo.png",
+            "models": [
+              { "id": 1, "name": "S-class", "images": [] },
+              { "id": 2, "name": "E-cllas", "images": [] },
+              { "id": 3, "name": "G-class", "images": [] }
+            ]
+          },
+          {
+            "brandId": 4,
+            "brand": "Porsche",
+            "brandLogo": "/images/pages/home/brands/PORSH-logo.png",
+            "models": [
+              { "id": 1, "name": "911", "images": [] },
+              { "id": 2, "name": "Cayenne", "images": [] },
+              { "id": 3, "name": "Panamera", "images": [] }
+            ]
+          },
+          {
+            "brandId": 5,
+            "brand": "Audi",
+            "brandLogo": "/images/pages/home/brands/AUDI-logo.png",
+            "models": [
+              { "id": 1, "name": "S8", "images": [] },
+              { "id": 2, "name": "RS6", "images": [] },
+              { "id": 3, "name": "R8", "images": [] }
+            ]
+          },
+          {
+            "brandId": 6,
+            "brand": "Toyota",
+            "brandLogo": "/images/pages/home/brands/TOYOTA-logo.png",
+            "models": [
+              { "id": 1, "name": "Camry", "images": [] },
+              { "id": 2, "name": "Corolla", "images": [] },
+              { "id": 3, "name": "Land-Cruiser", "images": [] }
+            ]
+          },
+          {
+            "brandId": 7,
+            "brand": "Hyundai",
+            "brandLogo": "/images/pages/home/brands/HYUNDAI-logo.png",
+            "models": [
+              { "id": 1, "name": "Elantra", "images": [] },
+              { "id": 2, "name": "Sonata", "images": [] },
+              { "id": 3, "name": "Santa-Fe", "images": [] }
+            ]
+          },
+          {
+            "brandId": 8,
+            "brand": "Volkswagen",
+            "brandLogo": "/images/pages/home/brands/VW-logo.png",
+            "models": [
+              { "id": 1, "name": "Touareg", "images": [] },
+              { "id": 2, "name": "Golf", "images": [] },
+              { "id": 3, "name": "", "images": [] }
+            ]
+          },
+          {
+            "brandId": 9,
+            "brand": "Lexus",
+            "brandLogo": "/images/pages/home/brands/LEXUS-logo.png",
+            "models": [
+              { "id": 1, "name": "RX", "images": [] },
+              { "id": 2, "name": "ES", "images": [] },
+              { "id": 3, "name": "LX", "images": [] }
+            ]
+          },
+          {
+            "brandId": 10,
+            "brand": "Nissan",
+            "brandLogo": "/images/pages/home/brands/NISSAN-logo.png",
+            "models": [
+              { "id": 1, "name": "Altima", "images": [] },
+              { "id": 2, "name": "Maxima", "images": [] },
+              { "id": 3, "name": "GT-R", "images": [] }
+            ]
+          },
+          {
+            "brandId": 11,
+            "brand": "Honda",
+            "brandLogo": "/images/pages/home/brands/HONDA-logo.png",
+            "models": [
+              { "id": 1, "name": "Civic", "images": [] },
+              { "id": 2, "name": "Accord", "images": [] },
+              { "id": 3, "name": "CR-V", "images": [] }
+            ]
+          },
+          {
+            "brandId": 12,
+            "brand": "Ford",
+            "brandLogo": "/images/pages/home/brands/FORD-logo.png",
+            "models": [
+              { "id": 1, "name": "Mustang", "images": [] },
+              { "id": 2, "name": "Explorer", "images": [] },
+              { "id": 3, "name": "F-150", "images": [] }
+            ]
+          },
+          {
+            "brandId": 13,
+            "brand": "Chevrolet",
+            "brandLogo": "/images/pages/home/brands/CHEV-logo.png",
+            "models": [
+              { "id": 1, "name": "Camaro", "images": [] },
+              { "id": 2, "name": "Tahoe", "images": [] },
+              { "id": 3, "name": "Malibu", "images": [] }
+            ]
+          },
+          {
+            "brandId": 14,
+            "brand": "Kia",
+            "brandLogo": "/images/pages/home/brands/KIA-logo.png",
+            "models": [
+              { "id": 1, "name": "Sportage", "images": [] },
+              { "id": 2, "name": "Sorento", "images": [] },
+              { "id": 3, "name": "Stinger", "images": [] }
+            ]
+          },
+          {
+            "brandId": 15,
+            "brand": "Jeep",
+            "brandLogo": "/images/pages/home/brands/JEEP-logo.png",
+            "models": [
+              { "id": 1, "name": "Wrangler", "images": [] },
+              { "id": 2, "name": "Cherokee", "images": [] },
+              { "id": 3, "name": "Grand Cherokee", "images": [] }
+            ]
+          },
+          {
+            "brandId": 16,
+            "brand": "Mazda",
+            "brandLogo": "/images/pages/home/brands/MAZDA-logo.png",
+            "models": [
+              { "id": 1, "name": "CX-5", "images": [] },
+              { "id": 2, "name": "Mazda3", "images": [] },
+              { "id": 3, "name": "Mazda6", "images": [] }
+            ]
+          },
+          {
+            "brandId": 17,
+            "brand": "Subaru",
+            "brandLogo": "/images/pages/home/brands/SUBARU-logo.png",
+            "models": [
+              { "id": 1, "name": "Outback", "images": [] },
+              { "id": 2, "name": "Forester", "images": [] },
+              { "id": 3, "name": "WRX", "images": [] }
+            ]
+          },
+          {
+            "brandId": 18,
+            "brand": "Volvo",
+            "brandLogo": "/images/pages/home/brands/VOLVO-logo.png",
+            "models": [
+              { "id": 1, "name": "XC90", "images": [] },
+              { "id": 2, "name": "XC60", "images": [] },
+              { "id": 3, "name": "S60", "images": [] }
+            ]
+          },
+          {
+            "brandId": 19,
+            "brand": "Renault",
+            "brandLogo": "/images/pages/home/brands/RENAULT-logo.png",
+            "models": [
+              { "id": 1, "name": "Megane", "images": [] },
+              { "id": 2, "name": "Clio", "images": [] },
+              { "id": 3, "name": "Kadjar", "images": [] }
+            ]
+          },
+          {
+            "brandId": 20,
+            "brand": "Mitsubishi",
+            "brandLogo": "/images/pages/home/brands/MITSUBISHI-logo.png",
+            "models": [
+              { "id": 1, "name": "Outlander", "images": [] },
+              { "id": 2, "name": "Pajero", "images": [] },
+              { "id": 3, "name": "Eclipse", "images": [] }
+            ]
+          },
+          {
+            "brandId": 21,
+            "brand": "Suzuki",
+            "brandLogo": "/images/pages/home/brands/SUZUKI-logo.png",
+            "models": [
+              { "id": 1, "name": "Vitara", "images": [] },
+              { "id": 2, "name": "Swift", "images": [] },
+              { "id": 3, "name": "Jimny", "images": [] }
+            ]
+          },
+          {
+            "brandId": 22,
+            "brand": "Land Rover",
+            "brandLogo": "/images/pages/home/brands/LANDROVER-logo.png",
+            "models": [
+              { "id": 1, "name": "Range Rover", "images": [] },
+              { "id": 2, "name": "Discovery", "images": [] },
+              { "id": 3, "name": "Defender", "images": [] }
+            ]
+          },
+          {
+            "brandId": 23,
+            "brand": "Mini",
+            "brandLogo": "/images/pages/home/brands/MINI-logo.png",
+            "models": [
+              { "id": 1, "name": "Cooper", "images": [] },
+              { "id": 2, "name": "Countryman", "images": [] },
+              { "id": 3, "name": "Clubman", "images": [] }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Parts",
+        "categoryImage": "/images/pages/home/categories/partsCat.png",
+        "brands": [
+          {
+            "brandId": 1,
+            "brand": "BMW",
+            "parts": [
+              { "id": 1, "name": "Фильтр масляный" },
+              { "id": 2, "name": "Тормозные колодки" },
+              { "id": 3, "name": "Ремень ГРМ" }
+            ]
+          },
+          {
+            "brandId": 2,
+            "brand": "Opel",
+            "parts": [
+              { "id": 1, "name": "Фары" },
+              { "id": 2, "name": "Сцепление" },
+              { "id": 3, "name": "Аккумулятор" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Service",
+        "categoryImage": "/images/pages/home/categories/carsCat.png",
+        "brands": []
+      },
+      {
+        "id": 4,
+        "name": "Detailing",
+        "categoryImage": "/images/pages/home/categories/carsCat.png",
+        "brands": []
+      }
+    ]
+  }
+}
