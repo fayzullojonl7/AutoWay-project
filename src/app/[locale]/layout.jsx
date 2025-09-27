@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import {routing} from '@/i18n/routing';
- 
+import { routing } from "@/i18n/routing";
+
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
@@ -31,8 +31,12 @@ export default async function RootLayout({ children, params }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <section className="max-w-[1600px] mx-auto">
+          <Header />
+          <NextIntlClientProvider>
+            <section>{children}</section>
+          </NextIntlClientProvider>
+        </section>
       </body>
     </html>
   );

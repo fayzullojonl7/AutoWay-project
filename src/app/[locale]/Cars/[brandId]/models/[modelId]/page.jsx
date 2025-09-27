@@ -2,11 +2,12 @@
 
 import { useEffect, useState, use } from "react";
 import axios from "axios";
+import Link from "next/link";
 
 const BASIC_URL = "http://localhost:3000/data";
 
 export default function ModelVehiclesPage({ params }) {
-  const { brandId, modelId } = use(params); // unwrap params
+  const { locale, brandId, modelId } = use(params); 
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -43,9 +44,14 @@ export default function ModelVehiclesPage({ params }) {
           model.vehicles.map((vehicle) => (
             <div
               key={vehicle.id}
-              className="w-[300px]  p-4 rounded-[10px] shadow-md"
+              className="w-[300px] p-4 rounded-[10px] shadow-md"
             >
-              <img src={vehicle.cardCover} alt="" />
+              {/* ✅ правильный href */}
+              <Link
+                href={`/${locale}/Cars/${brandId}/models/${modelId}/${vehicle.id}`}
+              >
+                <img src={vehicle.cardCover} alt={vehicle.name} />
+              </Link>
               <h2 className="font-bold">{vehicle.name}</h2>
               <p>Year: {vehicle.year}</p>
               <p>Fuel: {vehicle.fuelType}</p>

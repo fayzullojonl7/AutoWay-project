@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <section className="flex rounded-b-[20px] fixed z-[10] w-[100%] bg-white px-[40px] py-[20px] justify-between items-center shadow-md">
+    <section className="max-w-[1600px] flex rounded-b-[20px] fixed z-[10] w-[100%] bg-white px-[40px] py-[20px] justify-between items-center shadow-md">
       <Link href={"/"}>
         <img
           src="/images/pages/home/header/autoWay-Light.jpg"

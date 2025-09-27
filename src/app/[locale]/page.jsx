@@ -25,29 +25,26 @@ export default function Home() {
 
   return (
     <section className="px-[50px] pt-[150px] ">
-      <section className="h-[80vh] relative">
-        {/* Светлая версия */}
+      <section className="md:h-[80vh] relative">
         <img
           src="/images/pages/home/header/m5G90.jpg"
           alt="m5"
           className="w-[100%] rounded-[20px] h-[100%] dark:hidden"
         />
-
-        {/* Тёмная версия */}
         <img
           src="/images/pages/home/header/m5G90Touring.png"
           alt="m5-dark"
           className="w-[100%] rounded-[20px] h-[100%] hidden dark:block"
         />
         <section className="absolute w-[100%] h-[100%] bg-[#5252ff00] top-[0px] rounded-[20px]">
-          <h1 className=" font-bold text-[45px] text-center mt-[50px]">
+          <h1 className=" font-bold md:text-[45px] text-center mt-[50px]">
             FIND YOR DREAM CAR
           </h1>
         </section>
       </section>
       <section className="flex flex-col gap-[30px] py-[50px]">
         <h1 className="text-center text-[30px] font-bold">CATEGORIES</h1>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap">
           {data?.categories?.map((cat) => (
             <Link href={cat.name} key={cat.id}>
               <div className="dark:shadow-md dark:shadow-[#ffffff8b] text-[30px] overflow-hidden rounded-[20px] h-[170px] w-[300px] justify-between pl-[30px] shadow-md  flex items-center py-[20px] gap-[10px]">
