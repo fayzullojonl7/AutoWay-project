@@ -5,6 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import WishlistButton from "@/components/WishListButton";
 import Image from "next/image";
+import VehicleImage from "@/components/VehicleImages";
 
 const BASIC_URL = "http://localhost:3000/data";
 
@@ -21,6 +22,7 @@ export default function ModelVehiclesPage({ params }) {
   }, []);
 
   const formatMileage = (mileage) => {
+    if (!mileage && mileage !== 0) return "-"; // если нет данных
     if (mileage >= 1000) {
       return `${Math.floor(mileage / 1000)}k`;
     }
@@ -28,11 +30,11 @@ export default function ModelVehiclesPage({ params }) {
   };
 
   const getMileageBg = (mileage) => {
+    if (!mileage && mileage !== 0) return "bg-gray-200";
     if (mileage < 5000) return "bg-green-300";
     if (mileage < 20000) return "bg-amber-200";
     return "bg-red-300";
   };
-
   if (!data.categories) return <div>Loading...</div>;
 
   const carsCategory = data.categories.find((c) => c.name === "Cars");
@@ -47,10 +49,10 @@ export default function ModelVehiclesPage({ params }) {
   if (!model) return <div>Model not found</div>;
 
   return (
-    <div className="pt-[130px] md:px-[50px] px-[20px]">
+    <div className="pt-[100px] md:pt-[130px] md:px-[50px] px-[20px]">
       <div className="flex items-center gap-[10px]">
         <Link href={`/Cars/${brandId}`}>
-          <button className="md:px-6 px-[5px] py-[2px] md:py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          <button className="md:px-6 px-[5px] py-[2px] md:py-2 bg-[#5252ff] text-white rounded-lg hover:bg-[#5252ffb1]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -73,7 +75,7 @@ export default function ModelVehiclesPage({ params }) {
       </div>
 
       <div className="flex flex-wrap gap-[30px] mt-[20px]">
-        {model.vehicles.length === 0 ? (
+        {!model.vehicles || model.vehicles.length === 0 ? (
           <p>No vehicles available for this model.</p>
         ) : (
           model.vehicles.map((vehicle) => (
@@ -90,15 +92,23 @@ export default function ModelVehiclesPage({ params }) {
                   {vehicle.price > 50000 ? "Expensive" : "Great Price"}
                 </div>
                 <WishlistButton vehicle={vehicle} />
-                <div className="md:h-[218px] h-[260px] flex items-center pb-[5px] justify-center overflow-hidden">
+                <div className="md:h-[218px] h-[260px] md:hidden flex items-center pb-[5px] justify-center overflow-hidden">
+                  {" "}
                   <img
                     src={vehicle.cardCover}
                     alt={vehicle.name}
-                    className="rounded-t-[20px] w-[100%]"
+                    className="rounded-t-[20px] w-[100%] "
                   />
                 </div>
+
+                <VehicleImage
+                  cardCover={vehicle.cardCover}
+                  carImages={vehicle.carImages}
+                  name={vehicle.name}
+                />
+
                 <div className="p-[20px]">
-                  <div className="border-b-[1px] py-[5px] border-[#E9E9E9]">
+                  <div className="border-b-[1px] py-[5px] border-[#E9E9E9] dark:border-[#e9e9e946]">
                     <h1 className="font-bold">
                       {vehicle.name} {vehicle.year}
                     </h1>
@@ -108,7 +118,7 @@ export default function ModelVehiclesPage({ params }) {
                       {vehicle.drive}
                     </p>
                   </div>
-                  <div className="border-b-[1px] border-[#E9E9E9] flex justify-between">
+                  <div className="border-b-[1px] border-[#E9E9E9] dark:border-[#e9e9e946] flex justify-between">
                     <div className="flex items-center flex-col py-[5px] gap-[10px]">
                       <Image
                         src={"/images/pages/home/otherIcons/mileageIcon.svg"}
@@ -122,14 +132,14 @@ export default function ModelVehiclesPage({ params }) {
                         alt="dd"
                         width={100}
                         height={100}
-                        className="w-[20px] h-[20px] dark:flex"
+                        className="w-[20px] h-[20px] dark:block hidden"
                       />
                       <div
                         className={`${getMileageBg(
-                          vehicle.mialage
+                          vehicle.mileage
                         )} px-[2px] text-black rounded-[10px]`}
                       >
-                        <p>{formatMileage(vehicle.mialage)} Miles</p>
+                        <p>{formatMileage(vehicle.mileage)} Miles</p>
                       </div>
                     </div>
                     <div className="flex items-center flex-col py-[5px] gap-[10px]">
@@ -147,7 +157,7 @@ export default function ModelVehiclesPage({ params }) {
                         alt="dd"
                         width={100}
                         height={100}
-                        className="w-[20px] h-[20px] dark:flex"
+                        className="w-[20px] h-[20px] dark:block hidden"
                       />
                       <p>{vehicle.fuelType}</p>
                     </div>
@@ -160,11 +170,13 @@ export default function ModelVehiclesPage({ params }) {
                         className="w-[20px] h-[20px] dark:hidden"
                       />
                       <Image
-                        src={"/images/pages/home/otherIcons/gearBoxIconWhite.svg"}
+                        src={
+                          "/images/pages/home/otherIcons/gearBoxIconWhite.svg"
+                        }
                         alt="dd"
                         width={100}
                         height={100}
-                        className="w-[20px] h-[20px] dark:flex"
+                        className="w-[20px] h-[20px] dark:block hidden"
                       />
                       <p>{vehicle.gearBox}</p>
                     </div>

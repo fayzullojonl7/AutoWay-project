@@ -43,7 +43,12 @@
                     "gearBox": "Robot",
                     "price": "80000",
                     "mialage": "22000",
-                    "carImages": [],
+                    "carImages": [
+                      "https://i.pinimg.com/1200x/ed/65/64/ed656406e5e0da079edb002bc9120951.jpg",
+                      "https://i.pinimg.com/736x/21/6d/4f/216d4fd0bf80e6f5fd7e3035b33b8806.jpg",
+                      "https://i.pinimg.com/736x/e0/a1/90/e0a190f7913ca7ba6fac5bb81b9c677e.jpg",
+                      "https://i.pinimg.com/1200x/28/5b/ef/285bef4644a89bae978f7f739d547bcd.jpg"
+                    ],
                     "isSold": false,
                     "color": "black",
                     "power": "4.4",
@@ -60,12 +65,115 @@
                     "gearBox": "Robot",
                     "price": "120000",
                     "mialage": "100",
-                    "carImages": [],
+                    "carImages": [
+                      "https://i.pinimg.com/1200x/1b/30/59/1b3059b79285d1f6e235396433252a69.jpg",
+                      "https://i.pinimg.com/1200x/e3/f3/95/e3f395cb92e7b3f85562708a54de32bc.jpg",
+                      "https://i.pinimg.com/736x/5e/9a/3b/5e9a3b227381b2c85c59b320e5f814c9.jpg",
+                      "https://i.pinimg.com/1200x/52/16/07/521607f163aa466a1abce8297c562e65.jpg",
+                      "https://i.pinimg.com/736x/6f/f1/9a/6ff19a927ba863ebe7f87ba476c9effa.jpg",
+                      "https://i.pinimg.com/1200x/cd/10/7e/cd107ec28b55db77f08289e3fe0f30eb.jpg"
+                    ],
                     "isSold": false,
                     "color": "black",
                     "power": "4.4",
                     "turbo": true,
                     "drive": "RWD&AWD"
+                  },
+                  {
+                    "id": 1759133842832,
+                    "name": "vscsc",
+                    "year": "",
+                    "fuelType": "",
+                    "gearBox": "",
+                    "price": "",
+                    "mialage": "",
+                    "color": "",
+                    "power": "",
+                    "turbo": false,
+                    "drive": "",
+                    "cardCover": "https://i.pinimg.com/1200x/cd/10/7e/cd107ec28b55db77f08289e3fe0f30eb.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/1200x/65/e5/82/65e58292f26ffa28ba1c782bdaa96223.jpg"
+                    ]
+                  },
+                  {
+                    "id": 1759134237671,
+                    "name": "ss",
+                    "year": "2023",
+                    "fuelType": "Бензин",
+                    "gearBox": "АКПП",
+                    "drive": "Полный",
+                    "color": "Синий",
+                    "power": "4.4",
+                    "mileage": "242424",
+                    "price": "1213",
+                    "turbo": false,
+                    "cardCover": "https://i.pinimg.com/1200x/65/e5/82/65e58292f26ffa28ba1c782bdaa96223.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/736x/b5/c4/df/b5c4df555eae449505d78ba27abf6405.jpg",
+                      " https://i.pinimg.com/1200x/86/90/b2/8690b291074fa5f3b962ed697a21bd71.jpg"
+                    ],
+                    "description": "wdwcfwqvrgegrwgwe"
+                  },
+                  {
+                    "id": 1759134893773,
+                    "name": "BMW M2",
+                    "year": 2023,
+                    "fuelType": "Бензин",
+                    "gearBox": "МКПП",
+                    "price": 42424,
+                    "mileage": 23424,
+                    "color": "Синий",
+                    "power": 2.3,
+                    "turbo": false,
+                    "drive": "Передний",
+                    "cardCover": "https://i.pinimg.com/1200x/eb/3a/b9/eb3ab93ab3181706c0ea55bc998b65f3.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/1200x/f5/2b/a8/f52ba89d4eef45fa9199a054b072364c.jpg"
+                    ],
+                    "description": "dwdqwefqwgf"
+                  },
+                  {
+                    "id": 1759136947021,
+                    "name": "BMW M2",
+                    "year": "2023",
+                    "fuelType": "",
+                    "gearBox": "",
+                    "price": "25245",
+                    "mileage": "34543",
+                    "color": "",
+                    "power": "4.4",
+                    "turbo": true,
+                    "drive": "",
+                    "cardCover": "https://i.pinimg.com/1200x/56/34/e2/5634e25bae9f195df08eef3936f04ecd.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/736x/3c/07/e3/3c07e379afaabca207f4470abbad200d.jpg",
+                      "https://i.pinimg.com/736x/80/9e/75/809e7581eaaed0f79253b31882dda6d2.jpg",
+                      "https://i.pinimg.com/736x/0a/e2/33/0ae233a3e6084a3319336c14e3c8b42c.jpg",
+                      "https://i.pinimg.com/736x/7d/58/ac/7d58ac22087db3c40ac73d1eeaa40385.jpg",
+                      "https://i.pinimg.com/1200x/6f/2b/4c/6f2b4c7bf03c307511c4fcc2e3870545.jpg",
+                      "https://i.pinimg.com/736x/87/ac/2c/87ac2cec46a90d5ea8c69166a5ff06d1.jpg"
+                    ],
+                    "description": "qewfeerwg"
+                  },
+                  {
+                    "id": 1759139317771,
+                    "name": "BMW M2",
+                    "year": "1313",
+                    "price": "323",
+                    "mileage": "2342",
+                    "power": "4.4",
+                    "turbo": true,
+                    "cardCover": "https://i.pinimg.com/736x/e6/bb/14/e6bb14b79ffa2c0fb2413fa9687dcffe.jpg",
+                    "carImages": [
+                      "32er",
+                      "ewfwef",
+                      "wfwef",
+                      "fwfwfw",
+                      "ffwefw",
+                      "fwefrwfwr"
+                    ],
+                    "description": "dqwfeqwf"
                   }
                 ]
               },
@@ -79,7 +187,26 @@
                 "id": 3,
                 "name": "M4",
                 "prevImg": "/images/pages/home/models/BMW/M4.png",
-                "vehicles": []
+                "vehicles": [
+                  {
+                    "id": 1759135165734,
+                    "name": "BMW M4",
+                    "year": "2023",
+                    "fuelType": "Бензин",
+                    "gearBox": "МКПП",
+                    "price": "12345",
+                    "mileage": "212345",
+                    "color": "Красный",
+                    "power": "4.4",
+                    "turbo": true,
+                    "drive": "Передний",
+                    "cardCover": "https://i.pinimg.com/736x/48/21/de/4821deec8c432648d88a10ef91faf4de.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/736x/3c/07/e3/3c07e379afaabca207f4470abbad200d.jpg"
+                    ],
+                    "description": "fwfwfwe"
+                  }
+                ]
               },
               {
                 "id": 4,
@@ -124,9 +251,21 @@
             "brand": "Opel",
             "brandLogo": "/images/pages/home/brands/OPEL-logo.png",
             "models": [
-              { "id": 1, "name": "Astra", "images": [] },
-              { "id": 2, "name": "Vectra", "images": [] },
-              { "id": 3, "name": "Insignia", "images": [] }
+              {
+                "id": 1,
+                "name": "Astra",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Vectra",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Insignia",
+                "images": []
+              }
             ]
           },
           {
@@ -134,9 +273,21 @@
             "brand": "Mercedes-Benz",
             "brandLogo": "/images/pages/home/brands/MERC-logo.png",
             "models": [
-              { "id": 1, "name": "S-class", "images": [] },
-              { "id": 2, "name": "E-cllas", "images": [] },
-              { "id": 3, "name": "G-class", "images": [] }
+              {
+                "id": 1,
+                "name": "S-class",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "E-cllas",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "G-class",
+                "images": []
+              }
             ]
           },
           {
@@ -144,9 +295,21 @@
             "brand": "Porsche",
             "brandLogo": "/images/pages/home/brands/PORSH-logo.png",
             "models": [
-              { "id": 1, "name": "911", "images": [] },
-              { "id": 2, "name": "Cayenne", "images": [] },
-              { "id": 3, "name": "Panamera", "images": [] }
+              {
+                "id": 1,
+                "name": "911",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Cayenne",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Panamera",
+                "images": []
+              }
             ]
           },
           {
@@ -154,9 +317,21 @@
             "brand": "Audi",
             "brandLogo": "/images/pages/home/brands/AUDI-logo.png",
             "models": [
-              { "id": 1, "name": "S8", "images": [] },
-              { "id": 2, "name": "RS6", "images": [] },
-              { "id": 3, "name": "R8", "images": [] }
+              {
+                "id": 1,
+                "name": "S8",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "RS6",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "R8",
+                "images": []
+              }
             ]
           },
           {
@@ -164,9 +339,21 @@
             "brand": "Toyota",
             "brandLogo": "/images/pages/home/brands/TOYOTA-logo.png",
             "models": [
-              { "id": 1, "name": "Camry", "images": [] },
-              { "id": 2, "name": "Corolla", "images": [] },
-              { "id": 3, "name": "Land-Cruiser", "images": [] }
+              {
+                "id": 1,
+                "name": "Camry",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Corolla",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Land-Cruiser",
+                "images": []
+              }
             ]
           },
           {
@@ -174,9 +361,21 @@
             "brand": "Hyundai",
             "brandLogo": "/images/pages/home/brands/HYUNDAI-logo.png",
             "models": [
-              { "id": 1, "name": "Elantra", "images": [] },
-              { "id": 2, "name": "Sonata", "images": [] },
-              { "id": 3, "name": "Santa-Fe", "images": [] }
+              {
+                "id": 1,
+                "name": "Elantra",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Sonata",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Santa-Fe",
+                "images": []
+              }
             ]
           },
           {
@@ -184,9 +383,21 @@
             "brand": "Volkswagen",
             "brandLogo": "/images/pages/home/brands/VW-logo.png",
             "models": [
-              { "id": 1, "name": "Touareg", "images": [] },
-              { "id": 2, "name": "Golf", "images": [] },
-              { "id": 3, "name": "", "images": [] }
+              {
+                "id": 1,
+                "name": "Touareg",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Golf",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "",
+                "images": []
+              }
             ]
           },
           {
@@ -194,9 +405,21 @@
             "brand": "Lexus",
             "brandLogo": "/images/pages/home/brands/LEXUS-logo.png",
             "models": [
-              { "id": 1, "name": "RX", "images": [] },
-              { "id": 2, "name": "ES", "images": [] },
-              { "id": 3, "name": "LX", "images": [] }
+              {
+                "id": 1,
+                "name": "RX",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "ES",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "LX",
+                "images": []
+              }
             ]
           },
           {
@@ -204,9 +427,21 @@
             "brand": "Nissan",
             "brandLogo": "/images/pages/home/brands/NISSAN-logo.png",
             "models": [
-              { "id": 1, "name": "Altima", "images": [] },
-              { "id": 2, "name": "Maxima", "images": [] },
-              { "id": 3, "name": "GT-R", "images": [] }
+              {
+                "id": 1,
+                "name": "Altima",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Maxima",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "GT-R",
+                "images": []
+              }
             ]
           },
           {
@@ -214,9 +449,21 @@
             "brand": "Honda",
             "brandLogo": "/images/pages/home/brands/HONDA-logo.png",
             "models": [
-              { "id": 1, "name": "Civic", "images": [] },
-              { "id": 2, "name": "Accord", "images": [] },
-              { "id": 3, "name": "CR-V", "images": [] }
+              {
+                "id": 1,
+                "name": "Civic",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Accord",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "CR-V",
+                "images": []
+              }
             ]
           },
           {
@@ -224,9 +471,21 @@
             "brand": "Ford",
             "brandLogo": "/images/pages/home/brands/FORD-logo.png",
             "models": [
-              { "id": 1, "name": "Mustang", "images": [] },
-              { "id": 2, "name": "Explorer", "images": [] },
-              { "id": 3, "name": "F-150", "images": [] }
+              {
+                "id": 1,
+                "name": "Mustang",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Explorer",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "F-150",
+                "images": []
+              }
             ]
           },
           {
@@ -234,9 +493,21 @@
             "brand": "Chevrolet",
             "brandLogo": "/images/pages/home/brands/CHEV-logo.png",
             "models": [
-              { "id": 1, "name": "Camaro", "images": [] },
-              { "id": 2, "name": "Tahoe", "images": [] },
-              { "id": 3, "name": "Malibu", "images": [] }
+              {
+                "id": 1,
+                "name": "Camaro",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Tahoe",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Malibu",
+                "images": []
+              }
             ]
           },
           {
@@ -244,9 +515,21 @@
             "brand": "Kia",
             "brandLogo": "/images/pages/home/brands/KIA-logo.png",
             "models": [
-              { "id": 1, "name": "Sportage", "images": [] },
-              { "id": 2, "name": "Sorento", "images": [] },
-              { "id": 3, "name": "Stinger", "images": [] }
+              {
+                "id": 1,
+                "name": "Sportage",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Sorento",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Stinger",
+                "images": []
+              }
             ]
           },
           {
@@ -254,9 +537,21 @@
             "brand": "Jeep",
             "brandLogo": "/images/pages/home/brands/JEEP-logo.png",
             "models": [
-              { "id": 1, "name": "Wrangler", "images": [] },
-              { "id": 2, "name": "Cherokee", "images": [] },
-              { "id": 3, "name": "Grand Cherokee", "images": [] }
+              {
+                "id": 1,
+                "name": "Wrangler",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Cherokee",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Grand Cherokee",
+                "images": []
+              }
             ]
           },
           {
@@ -264,9 +559,21 @@
             "brand": "Mazda",
             "brandLogo": "/images/pages/home/brands/MAZDA-logo.png",
             "models": [
-              { "id": 1, "name": "CX-5", "images": [] },
-              { "id": 2, "name": "Mazda3", "images": [] },
-              { "id": 3, "name": "Mazda6", "images": [] }
+              {
+                "id": 1,
+                "name": "CX-5",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Mazda3",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Mazda6",
+                "images": []
+              }
             ]
           },
           {
@@ -274,9 +581,21 @@
             "brand": "Subaru",
             "brandLogo": "/images/pages/home/brands/SUBARU-logo.png",
             "models": [
-              { "id": 1, "name": "Outback", "images": [] },
-              { "id": 2, "name": "Forester", "images": [] },
-              { "id": 3, "name": "WRX", "images": [] }
+              {
+                "id": 1,
+                "name": "Outback",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Forester",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "WRX",
+                "images": []
+              }
             ]
           },
           {
@@ -284,9 +603,21 @@
             "brand": "Volvo",
             "brandLogo": "/images/pages/home/brands/VOLVO-logo.png",
             "models": [
-              { "id": 1, "name": "XC90", "images": [] },
-              { "id": 2, "name": "XC60", "images": [] },
-              { "id": 3, "name": "S60", "images": [] }
+              {
+                "id": 1,
+                "name": "XC90",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "XC60",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "S60",
+                "images": []
+              }
             ]
           },
           {
@@ -294,9 +625,21 @@
             "brand": "Renault",
             "brandLogo": "/images/pages/home/brands/RENAULT-logo.png",
             "models": [
-              { "id": 1, "name": "Megane", "images": [] },
-              { "id": 2, "name": "Clio", "images": [] },
-              { "id": 3, "name": "Kadjar", "images": [] }
+              {
+                "id": 1,
+                "name": "Megane",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Clio",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Kadjar",
+                "images": []
+              }
             ]
           },
           {
@@ -304,9 +647,21 @@
             "brand": "Mitsubishi",
             "brandLogo": "/images/pages/home/brands/MITSUBISHI-logo.png",
             "models": [
-              { "id": 1, "name": "Outlander", "images": [] },
-              { "id": 2, "name": "Pajero", "images": [] },
-              { "id": 3, "name": "Eclipse", "images": [] }
+              {
+                "id": 1,
+                "name": "Outlander",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Pajero",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Eclipse",
+                "images": []
+              }
             ]
           },
           {
@@ -314,9 +669,21 @@
             "brand": "Suzuki",
             "brandLogo": "/images/pages/home/brands/SUZUKI-logo.png",
             "models": [
-              { "id": 1, "name": "Vitara", "images": [] },
-              { "id": 2, "name": "Swift", "images": [] },
-              { "id": 3, "name": "Jimny", "images": [] }
+              {
+                "id": 1,
+                "name": "Vitara",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Swift",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Jimny",
+                "images": []
+              }
             ]
           },
           {
@@ -324,9 +691,21 @@
             "brand": "Land Rover",
             "brandLogo": "/images/pages/home/brands/LANDROVER-logo.png",
             "models": [
-              { "id": 1, "name": "Range Rover", "images": [] },
-              { "id": 2, "name": "Discovery", "images": [] },
-              { "id": 3, "name": "Defender", "images": [] }
+              {
+                "id": 1,
+                "name": "Range Rover",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Discovery",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Defender",
+                "images": []
+              }
             ]
           },
           {
@@ -334,9 +713,21 @@
             "brand": "Mini",
             "brandLogo": "/images/pages/home/brands/MINI-logo.png",
             "models": [
-              { "id": 1, "name": "Cooper", "images": [] },
-              { "id": 2, "name": "Countryman", "images": [] },
-              { "id": 3, "name": "Clubman", "images": [] }
+              {
+                "id": 1,
+                "name": "Cooper",
+                "images": []
+              },
+              {
+                "id": 2,
+                "name": "Countryman",
+                "images": []
+              },
+              {
+                "id": 3,
+                "name": "Clubman",
+                "images": []
+              }
             ]
           }
         ]
@@ -350,18 +741,36 @@
             "brandId": 1,
             "brand": "BMW",
             "parts": [
-              { "id": 1, "name": "Фильтр масляный" },
-              { "id": 2, "name": "Тормозные колодки" },
-              { "id": 3, "name": "Ремень ГРМ" }
+              {
+                "id": 1,
+                "name": "Фильтр масляный"
+              },
+              {
+                "id": 2,
+                "name": "Тормозные колодки"
+              },
+              {
+                "id": 3,
+                "name": "Ремень ГРМ"
+              }
             ]
           },
           {
             "brandId": 2,
             "brand": "Opel",
             "parts": [
-              { "id": 1, "name": "Фары" },
-              { "id": 2, "name": "Сцепление" },
-              { "id": 3, "name": "Аккумулятор" }
+              {
+                "id": 1,
+                "name": "Фары"
+              },
+              {
+                "id": 2,
+                "name": "Сцепление"
+              },
+              {
+                "id": 3,
+                "name": "Аккумулятор"
+              }
             ]
           }
         ]

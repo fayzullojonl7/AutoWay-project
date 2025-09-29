@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.motionDiv1{
+  background-image: url("https://i.pinimg.com/1200x/92/26/27/922627a9b7abc829ceac5b3f080946b4.jpg");
+  background-size: cover;
+ 
+}
+.motionDiv2{
+  background-image: url("https://i.pinimg.com/1200x/74/e5/1e/74e51edb3e307ca343cc5f77fd346329.jpg");
+  background-size: cover;
+}
+.motionDiv3{
+  background-image: url("https://i.pinimg.com/1200x/07/e1/ed/07e1ed0bc8f0dd5951d3896e19c8fbba.jpg");
+  background-size: cover;
+}
+.forBlur2{
+  backdrop-filter: blur(10px);
+}

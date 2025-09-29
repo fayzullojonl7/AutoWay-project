@@ -47,7 +47,7 @@ export default function Home() {
         <div className="flex justify-between flex-wrap">
           {data?.categories?.map((cat) => (
             <Link href={cat.name} key={cat.id}>
-              <div className="dark:shadow-md dark:shadow-[#ffffff8b] text-[30px] overflow-hidden rounded-[20px] h-[170px] w-[300px] justify-between pl-[30px] shadow-md  flex items-center py-[20px] gap-[10px]">
+              <div className="dark:shadow-md dark:bg-[#ffffff1d] shadow-md text-[30px] overflow-hidden rounded-[20px] h-[170px] w-[300px] justify-between pl-[30px] shadow-md  flex items-center py-[20px] gap-[10px]">
                 <h1> {cat.name}</h1>
                 <img src={cat.categoryImage} alt="" className="w-[100px] " />
               </div>
