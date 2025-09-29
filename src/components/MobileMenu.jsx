@@ -5,14 +5,14 @@ import { FiHome, FiSearch, FiUser, FiSettings, FiPlus } from "react-icons/fi";
 
 export default function MobileMenu() {
   return (
-    <div className="fixed bottom-0 w-full flex justify-between items-center px-6 py-3 dark:bg-[#2d3c60] shadow-t z-50">
+    <div className="fixed bottom-0 w-full flex justify-between items-center px-6 py-3 bg-white dark:bg-[#2d3c60] shadow-t z-50">
       <div className="flex gap-6">
-        {/* <Link href={""}> */}
+        <Link href={"/"}>
           <button className="flex flex-col items-center">
             <FiHome size={24} className="cursor-pointer" />
             <h1 className="text-[12px]">Home</h1>
           </button>
-        {/* </Link> */}
+        </Link>
         <button className="flex flex-col items-center">
           <FiSearch size={24} className="cursor-pointer" />
           <h1 className="text-[12px]">Search</h1>
