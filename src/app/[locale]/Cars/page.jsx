@@ -23,11 +23,15 @@ const CarsPage = () => {
   const carsCategory = data?.categories?.find((cat) => cat.name === "Cars");
 
   return (
-    <div className="flex gap-[33px] flex-wrap px-[50px] pb-[50px] pt-[120px]">
+    <div className="flex gap-[33px] flex-wrap justify-center md:justify-start md:px-[50px] px-[20px] pb-[50px] pt-[120px]">
       {carsCategory?.brands?.map((brand) => (
         <Link key={brand.brandId} href={`/Cars/${brand.brandId}`}>
-          <div className="flex flex-col gap-[10px] rounded-[10px] items-center shadow-md w-[200px] h-[200px] justify-center">
-            <img src={brand.brandLogo} alt="" className="h-[100px]" />
+          <div className="flex flex-col gap-[10px] rounded-[10px] items-center shadow-md w-[150px] h-[100px] md:w-[200px] md:h-[200px] justify-center">
+            <img
+              src={brand.brandLogo}
+              alt=""
+              className="md:h-[100px] h-[50px]"
+            />
             <h3 className="text-center font-bold text-[18px]">{brand.brand}</h3>
           </div>
         </Link>

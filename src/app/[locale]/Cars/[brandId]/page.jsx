@@ -31,8 +31,8 @@ export default function BrandModelsPage({ params }) {
   return (
     <div className="pt-[130px] px-[50px]">
       <h1 className="text-3xl font-bold mb-6">{brand.brand} Models</h1>
-      <img src={brand.brandLogo} alt={brand.brand} className="w-32 mb-4" />
-      <div className="flex flex-wrap gap-[30px] py-[50px]">
+      {/* <img src={brand.brandLogo} alt={brand.brand} className="w-32 mb-4" /> */}
+      <div className="flex flex-wrap justify-center gap-[30px] py-[50px]">
         {brand.models.map((model) => (
           <Link key={model.id} href={`/Cars/${brandId}/models/${model.id}/`}>
             <div className="w-[300px]">

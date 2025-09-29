@@ -38,7 +38,7 @@ export default async function RootLayout({ children, params }) {
             <section>{children}</section>
           </NextIntlClientProvider>
         </section>
-        <div className="flex md:hidden">
+        <div className="flex md:hidden mt-[100px]">
           <MobileMenu />
         </div>
       </body>

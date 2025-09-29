@@ -21,14 +21,51 @@
                     "cardCover": "https://i.pinimg.com/1200x/39/f3/22/39f322cca6ca75780331dd0151e9ca28.jpg",
                     "name": "BMW M2",
                     "year": "2018",
-                    "fuelType": "Petrrol",
+                    "fuelType": "Petrol",
                     "description": "porty coupe with excellent handling",
-                    "gearBox": "Robot",
-                    "price": "$20000",
+                    "gearBox": "Automatic",
+                    "price": "20000",
                     "mialage": "12000",
                     "carImages": [],
                     "isSold": false,
-                    "color": "black"
+                    "color": "black",
+                    "power": "4.4",
+                    "turbo": true,
+                    "drive": "AWD"
+                  },
+                  {
+                    "id": 2,
+                    "cardCover": "https://i.pinimg.com/736x/41/76/f7/4176f7f94b13c3a6e9473583c660def4.jpg",
+                    "name": "BMW M2",
+                    "year": "2023",
+                    "fuelType": "Petrol",
+                    "description": "porty coupe with excellent handling",
+                    "gearBox": "Robot",
+                    "price": "80000",
+                    "mialage": "22000",
+                    "carImages": [],
+                    "isSold": false,
+                    "color": "black",
+                    "power": "4.4",
+                    "turbo": false,
+                    "drive": "RWD"
+                  },
+                  {
+                    "id": 3,
+                    "cardCover": "https://i.pinimg.com/1200x/12/7c/2e/127c2e1e569ca308c0c8d5683dbc14cd.jpg",
+                    "name": "BMW M2",
+                    "year": "2023",
+                    "fuelType": "Petrol",
+                    "description": "porty coupe with excellent handling",
+                    "gearBox": "Robot",
+                    "price": "120000",
+                    "mialage": "100",
+                    "carImages": [],
+                    "isSold": false,
+                    "color": "black",
+                    "power": "4.4",
+                    "turbo": true,
+                    "drive": "RWD&AWD"
                   }
                 ]
               },
@@ -48,6 +85,36 @@
                 "id": 4,
                 "name": "M5",
                 "prevImg": "/images/pages/home/models/BMW/M5.png",
+                "vehicles": []
+              },
+              {
+                "id": 5,
+                "name": "M760I",
+                "prevImg": "/images/pages/home/models/BMW/M760.png",
+                "vehicles": []
+              },
+              {
+                "id": 6,
+                "name": "M8",
+                "prevImg": "/images/pages/home/models/BMW/M8.png",
+                "vehicles": []
+              },
+              {
+                "id": 7,
+                "name": "X5M",
+                "prevImg": "/images/pages/home/models/BMW/X5M.png",
+                "vehicles": []
+              },
+              {
+                "id": 8,
+                "name": "XM",
+                "prevImg": "/images/pages/home/models/BMW/XM.png",
+                "vehicles": []
+              },
+              {
+                "id": 9,
+                "name": "X7",
+                "prevImg": "/images/pages/home/models/BMW/X7.png",
                 "vehicles": []
               }
             ]

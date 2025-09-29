@@ -43,7 +43,20 @@ export default function CarPage({ params }) {
     <div className="pt-[130px] px-[50px]">
       <Link href={`/${locale}/Cars/${brandId}/models/${modelId}`}>
         <button className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 mb-[20px]">
-          ← Back to Models
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+            />
+          </svg>
         </button>
       </Link>
       <h1 className="text-4xl font-bold mb-6">{car.name}</h1>
