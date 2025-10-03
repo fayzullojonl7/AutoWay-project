@@ -12,6 +12,8 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import PartnersMarquee from "@/components/partnersMarque";
 import Footer from "@/components/Footer";
+import DetailingSection from "@/components/detailingSection";
+import ServiceSection from "@/components/serviceSection";
 
 const BASIC_URL = "http://localhost:3000/data";
 
@@ -188,6 +190,12 @@ export default function Home() {
             to our clients. Our mission is simple: help you find your dream car
             with comfort, trust, and elegance.
           </p>
+        </section>
+        <section className="py-[50px] rounded-[20px] ">
+          <DetailingSection />
+        </section>
+        <section className="py-[50px] rounded-[20px] ">
+          <ServiceSection />
         </section>
 
         {/* CONTACT SECTION */}
