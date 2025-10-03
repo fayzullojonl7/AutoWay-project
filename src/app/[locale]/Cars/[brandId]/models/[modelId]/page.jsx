@@ -22,19 +22,22 @@ export default function ModelVehiclesPage({ params }) {
   }, []);
 
   const formatMileage = (mileage) => {
-    if (!mileage && mileage !== 0) return "-"; // если нет данных
-    if (mileage >= 1000) {
-      return `${Math.floor(mileage / 1000)}k`;
+    const miles = Number(mileage);
+    if (isNaN(miles)) return "-";
+    if (miles >= 1000) {
+      return `${Math.floor(miles / 1000)}k`;
     }
-    return mileage.toString();
+    return miles.toString();
   };
 
   const getMileageBg = (mileage) => {
-    if (!mileage && mileage !== 0) return "bg-gray-200";
-    if (mileage < 5000) return "bg-green-300";
-    if (mileage < 20000) return "bg-amber-200";
+    const miles = Number(mileage);
+    if (isNaN(miles)) return "bg-gray-200";
+    if (miles < 5000) return "bg-green-300";
+    if (miles < 20000) return "bg-amber-200";
     return "bg-red-300";
   };
+
   if (!data.categories) return <div>Loading...</div>;
 
   const carsCategory = data.categories.find((c) => c.name === "Cars");
@@ -49,7 +52,7 @@ export default function ModelVehiclesPage({ params }) {
   if (!model) return <div>Model not found</div>;
 
   return (
-    <div className="pt-[100px] md:pt-[130px] md:px-[50px] px-[20px]">
+    <div className="pt-[100px] md:pt-[130px] md:px-[90px] px-[20px]">
       <div className="flex items-center gap-[10px]">
         <Link href={`/Cars/${brandId}`}>
           <button className="md:px-6 px-[5px] py-[2px] md:py-2 bg-[#5252ff] text-white rounded-lg hover:bg-[#5252ffb1]">

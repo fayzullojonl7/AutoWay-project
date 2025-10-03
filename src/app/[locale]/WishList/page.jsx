@@ -18,7 +18,7 @@ const WishlistPage = () => {
   };
 
   return (
-    <section className="pt-[120px] flex flex-col px-6 gap-8 md:px-20">
+    <section className="pt-[120px] flex flex-col px-6 gap-8 md:px-20 ">
       <section className="py-10">
         <h1 className="text-2xl font-semibold text-gray-800 mb-6">
           Wishlist <span className="text-gray-500">({wishlist.length})</span>

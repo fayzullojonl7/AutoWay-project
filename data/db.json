@@ -25,7 +25,7 @@
                     "description": "porty coupe with excellent handling",
                     "gearBox": "Automatic",
                     "price": "20000",
-                    "mialage": "12000",
+                    "mileage": "120000",
                     "carImages": [],
                     "isSold": false,
                     "color": "black",
@@ -42,7 +42,7 @@
                     "description": "porty coupe with excellent handling",
                     "gearBox": "Robot",
                     "price": "80000",
-                    "mialage": "22000",
+                    "mileage": "22000",
                     "carImages": [
                       "https://i.pinimg.com/1200x/ed/65/64/ed656406e5e0da079edb002bc9120951.jpg",
                       "https://i.pinimg.com/736x/21/6d/4f/216d4fd0bf80e6f5fd7e3035b33b8806.jpg",
@@ -64,7 +64,7 @@
                     "description": "porty coupe with excellent handling",
                     "gearBox": "Robot",
                     "price": "120000",
-                    "mialage": "100",
+                    "mileage": "100",
                     "carImages": [
                       "https://i.pinimg.com/1200x/1b/30/59/1b3059b79285d1f6e235396433252a69.jpg",
                       "https://i.pinimg.com/1200x/e3/f3/95/e3f395cb92e7b3f85562708a54de32bc.jpg",
@@ -78,42 +78,6 @@
                     "power": "4.4",
                     "turbo": true,
                     "drive": "RWD&AWD"
-                  },
-                  {
-                    "id": 1759133842832,
-                    "name": "vscsc",
-                    "year": "",
-                    "fuelType": "",
-                    "gearBox": "",
-                    "price": "",
-                    "mialage": "",
-                    "color": "",
-                    "power": "",
-                    "turbo": false,
-                    "drive": "",
-                    "cardCover": "https://i.pinimg.com/1200x/cd/10/7e/cd107ec28b55db77f08289e3fe0f30eb.jpg",
-                    "carImages": [
-                      "https://i.pinimg.com/1200x/65/e5/82/65e58292f26ffa28ba1c782bdaa96223.jpg"
-                    ]
-                  },
-                  {
-                    "id": 1759134237671,
-                    "name": "ss",
-                    "year": "2023",
-                    "fuelType": "Бензин",
-                    "gearBox": "АКПП",
-                    "drive": "Полный",
-                    "color": "Синий",
-                    "power": "4.4",
-                    "mileage": "242424",
-                    "price": "1213",
-                    "turbo": false,
-                    "cardCover": "https://i.pinimg.com/1200x/65/e5/82/65e58292f26ffa28ba1c782bdaa96223.jpg",
-                    "carImages": [
-                      "https://i.pinimg.com/736x/b5/c4/df/b5c4df555eae449505d78ba27abf6405.jpg",
-                      " https://i.pinimg.com/1200x/86/90/b2/8690b291074fa5f3b962ed697a21bd71.jpg"
-                    ],
-                    "description": "wdwcfwqvrgegrwgwe"
                   },
                   {
                     "id": 1759134893773,
@@ -132,48 +96,6 @@
                       "https://i.pinimg.com/1200x/f5/2b/a8/f52ba89d4eef45fa9199a054b072364c.jpg"
                     ],
                     "description": "dwdqwefqwgf"
-                  },
-                  {
-                    "id": 1759136947021,
-                    "name": "BMW M2",
-                    "year": "2023",
-                    "fuelType": "",
-                    "gearBox": "",
-                    "price": "25245",
-                    "mileage": "34543",
-                    "color": "",
-                    "power": "4.4",
-                    "turbo": true,
-                    "drive": "",
-                    "cardCover": "https://i.pinimg.com/1200x/56/34/e2/5634e25bae9f195df08eef3936f04ecd.jpg",
-                    "carImages": [
-                      "https://i.pinimg.com/736x/3c/07/e3/3c07e379afaabca207f4470abbad200d.jpg",
-                      "https://i.pinimg.com/736x/80/9e/75/809e7581eaaed0f79253b31882dda6d2.jpg",
-                      "https://i.pinimg.com/736x/0a/e2/33/0ae233a3e6084a3319336c14e3c8b42c.jpg",
-                      "https://i.pinimg.com/736x/7d/58/ac/7d58ac22087db3c40ac73d1eeaa40385.jpg",
-                      "https://i.pinimg.com/1200x/6f/2b/4c/6f2b4c7bf03c307511c4fcc2e3870545.jpg",
-                      "https://i.pinimg.com/736x/87/ac/2c/87ac2cec46a90d5ea8c69166a5ff06d1.jpg"
-                    ],
-                    "description": "qewfeerwg"
-                  },
-                  {
-                    "id": 1759139317771,
-                    "name": "BMW M2",
-                    "year": "1313",
-                    "price": "323",
-                    "mileage": "2342",
-                    "power": "4.4",
-                    "turbo": true,
-                    "cardCover": "https://i.pinimg.com/736x/e6/bb/14/e6bb14b79ffa2c0fb2413fa9687dcffe.jpg",
-                    "carImages": [
-                      "32er",
-                      "ewfwef",
-                      "wfwef",
-                      "fwfwfw",
-                      "ffwefw",
-                      "fwefrwfwr"
-                    ],
-                    "description": "dqwfeqwf"
                   }
                 ]
               },
@@ -181,7 +103,30 @@
                 "id": 2,
                 "name": "M3",
                 "prevImg": "/images/pages/home/models/BMW/M3.png",
-                "vehicles": []
+                "vehicles": [
+                  {
+                    "id": 1759148935685,
+                    "name": "BMW M3",
+                    "year": "",
+                    "fuelType": "Бензин",
+                    "gearBox": "AT",
+                    "drive": "AWD",
+                    "power": "3.4",
+                    "turbo": true,
+                    "mileage": "",
+                    "price": "",
+                    "cardCover": "https://i.pinimg.com/736x/bf/d5/6a/bfd56a3f4a9b7bf2613cb319b9ff02d8.jpg",
+                    "carImages": [
+                      "https://i.pinimg.com/736x/1b/00/76/1b00769daa86276c57c6741eceaceb82.jpg",
+                      "https://i.pinimg.com/736x/02/61/71/026171c02c9307da62334a6c474525db.jpg",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ],
+                    "description": ""
+                  }
+                ]
               },
               {
                 "id": 3,
@@ -733,6 +678,18 @@
         ]
       },
       {
+        "id": 3,
+        "name": "Service",
+        "categoryImage": "/images/pages/home/categories/serviseCagt.png",
+        "brands": []
+      },
+      {
+        "id": 4,
+        "name": "Detailing",
+        "categoryImage": "/images/pages/home/categories/detCat.png",
+        "brands": []
+      },
+      {
         "id": 2,
         "name": "Parts",
         "categoryImage": "/images/pages/home/categories/partsCat.png",
@@ -774,18 +731,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": 3,
-        "name": "Service",
-        "categoryImage": "/images/pages/home/categories/carsCat.png",
-        "brands": []
-      },
-      {
-        "id": 4,
-        "name": "Detailing",
-        "categoryImage": "/images/pages/home/categories/carsCat.png",
-        "brands": []
       }
     ]
   }

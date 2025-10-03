@@ -7,6 +7,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import MobileMenu from "@/components/MobileMenu";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default async function RootLayout({ children, params }) {
         <div className="flex md:hidden mt-[100px]">
           <MobileMenu />
         </div>
+   
       </body>
     </html>
   );

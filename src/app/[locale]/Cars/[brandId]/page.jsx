@@ -30,7 +30,7 @@ export default function BrandModelsPage({ params }) {
 
   return (
     <div className="pt-[130px] px-[50px]">
-      <h1 className="text-3xl font-bold mb-6">{brand.brand} Models</h1>
+      
       <div className="flex items-center gap-[10px]">
         <Link href={`/Cars`}>
           <button className="md:px-6 px-[5px] py-[2px] md:py-2 bg-[#5252ff] text-white rounded-lg hover:bg-[#5252ffb1]">
@@ -50,7 +50,7 @@ export default function BrandModelsPage({ params }) {
             </svg>
           </button>
         </Link>
-        <h1 className="font-bold text-[20px] md:text-[30px]">{brand.brand}</h1>
+        <h1 className="font-bold text-[20px] md:text-[30px]">{brand.brand} Models</h1>
       </div>
 
       <div className="flex flex-wrap justify-center gap-[30px] py-[50px]">

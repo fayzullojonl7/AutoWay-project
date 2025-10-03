@@ -133,7 +133,7 @@ const AddPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       <AnimatePresence>
         {step === 1 && (
           <motion.div
@@ -141,55 +141,62 @@ const AddPage = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
-            className="motionDiv1 "
+            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
-            <div className="forBlur2 flex flex-col items-center justify-center min-h-screen p-6">
-              <h2 className="text-3xl mb-6 text-white">
-                Step1: Выбор бренда и модели
-              </h2>
-              <select
-                value={brandName}
-                onChange={(e) => {
-                  setBrandName(e.target.value);
-                  setModelName("");
-                }}
-                className="w-[300px] p-2 border rounded mb-2 text-white"
-              >
-                <option value="">Выберите бренд</option>
-                {data
-                  .find((c) => c.name === "Cars")
-                  ?.brands.map((b) => (
-                    <option key={b.brandId} value={b.brand}>
-                      {b.brand}
-                    </option>
-                  ))}
-              </select>
-
-              <select
-                value={modelName}
-                onChange={(e) => setModelName(e.target.value)}
-                disabled={!brandName}
-                className=" w-[300px] p-2 border rounded mb-2 text-white"
-              >
-                <option value="">Выберите модель</option>
-                {brandName &&
-                  data
+            <div className="forBlur2 flex items-center justify-between w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] overflow-hidden">
+              <div>
+                <img
+                  src="/images/AddPage/slide1.png"
+                  alt=""
+                  className="h-[600px]"
+                />
+              </div>
+              <div className="flex flex-col items-center px-[50px]">
+                <h2 className="text-3xl mb-6">Выбор бренда и модели</h2>
+                <select
+                  value={brandName}
+                  onChange={(e) => {
+                    setBrandName(e.target.value);
+                    setModelName("");
+                  }}
+                  className="w-[300px] p-2 border rounded mb-2"
+                >
+                  <option value="">Выберите бренд</option>
+                  {data
                     .find((c) => c.name === "Cars")
-                    ?.brands.find((b) => b.brand === brandName)
-                    ?.models.map((m) => (
-                      <option key={m.id} value={m.name}>
-                        {m.name}
+                    ?.brands.map((b) => (
+                      <option key={b.brandId} value={b.brand}>
+                        {b.brand}
                       </option>
                     ))}
-              </select>
+                </select>
 
-              <button
-                onClick={() => setStep(2)}
-                disabled={!brandName || !modelName}
-                className="mt-4 bg-blue-600 text-white p-3 rounded"
-              >
-                Далее
-              </button>
+                <select
+                  value={modelName}
+                  onChange={(e) => setModelName(e.target.value)}
+                  disabled={!brandName}
+                  className=" w-[300px] p-2 border rounded mb-2 "
+                >
+                  <option value="">Выберите модель</option>
+                  {brandName &&
+                    data
+                      .find((c) => c.name === "Cars")
+                      ?.brands.find((b) => b.brand === brandName)
+                      ?.models.map((m) => (
+                        <option key={m.id} value={m.name}>
+                          <div>{m.name}</div>
+                        </option>
+                      ))}
+                </select>
+
+                <button
+                  onClick={() => setStep(2)}
+                  disabled={!brandName || !modelName}
+                  className="mt-4 bg-blue-600 text-white p-3 rounded"
+                >
+                  Далее
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
@@ -199,24 +206,22 @@ const AddPage = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
-            className="motionDiv2 "
+            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
-            <div className="forBlur2 flex flex-col items-center justify-center min-h-screen p-6 ">
-              <h2 className="text-3xl mb-6 text-white">
-                Шаг 2: Характеристики
-              </h2>
+            <div className="forBlur2 w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] p-6">
+              <h2 className="text-3xl mb-6 ">Шаг 2: Характеристики</h2>
 
               <input
                 type="text"
                 placeholder="Мощность"
                 value={power}
                 onChange={(e) => setPower(e.target.value)}
-                className="w-[300px] text-white p-2 border rounded mb-2 "
+                className="w-[300px] p-2 border rounded mb-2 "
               />
               <select
                 value={drive}
                 onChange={(e) => setDrive(e.target.value)}
-                className="w-[300px] text-white p-2 border rounded mb-2"
+                className="w-[300px]  p-2 border rounded mb-2"
               >
                 <option value="">Привод</option>
                 <option value="AWD">Полный (AWD)</option>
@@ -226,7 +231,7 @@ const AddPage = () => {
               <select
                 value={fuelType}
                 onChange={(e) => setFuelType(e.target.value)}
-                className="w-[300px] text-white p-2 border rounded mb-2"
+                className="w-[300px]  p-2 border rounded mb-2"
               >
                 <option value="">Топливо</option>
                 <option value="Бензин">Бензин</option>
@@ -236,7 +241,7 @@ const AddPage = () => {
               <select
                 value={gearBox}
                 onChange={(e) => setGearBox(e.target.value)}
-                className="w-[300px] text-white p-2 border rounded mb-2"
+                className="w-[300px]  p-2 border rounded mb-2"
               >
                 <option value="">Коробка передач</option>
                 <option value="AT">Автомат</option>
@@ -250,7 +255,7 @@ const AddPage = () => {
                   onChange={(e) => setTurbo(e.target.checked)}
                   id="turbo"
                 />
-                <label htmlFor="turbo" className="text-white">
+                <label htmlFor="turbo" className="">
                   Турбо
                 </label>
               </div>
@@ -258,13 +263,13 @@ const AddPage = () => {
               <div className="flex gap-4">
                 <button
                   onClick={() => setStep(1)}
-                  className="bg-gray-500 text-white p-3 rounded"
+                  className="bg-gray-500  p-3 rounded"
                 >
                   Назад
                 </button>
                 <button
                   onClick={() => setStep(3)}
-                  className="bg-blue-600 text-white p-3 rounded"
+                  className="bg-blue-600 p-3 rounded"
                 >
                   Далее
                 </button>
@@ -278,9 +283,9 @@ const AddPage = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
-            className="motionDiv3 "
+            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
-            <div className="forBlur2 text-white flex flex-col items-center justify-center min-h-screen p-6">
+            <div className="forBlur2 w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] p-6">
               <h2 className="text-3xl mb-6">Шаг 3: Фото</h2>
               <input
                 type="text"
@@ -308,7 +313,7 @@ const AddPage = () => {
                             setShowInput(newShowInput);
                           }}
                         >
-                          <div className="text-white text-sm flex flex-col items-center">
+                          <div className=" text-sm flex flex-col items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -366,56 +371,57 @@ const AddPage = () => {
             </div>
           </motion.div>
         )}
-        \
         {step === 4 && (
           <motion.div
             key="step4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="motionDiv4 flex flex-col items-center justify-center min-h-screen p-6"
+            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
-            <h2 className="text-3xl mb-6">Шаг 4: Данные</h2>
-            <input
-              type="text"
-              placeholder="Год выпуска"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              className="w-full p-2 border rounded mb-2"
-            />
-            <input
-              type="text"
-              placeholder="Пробег"
-              value={mileage}
-              onChange={(e) => setMileage(e.target.value)}
-              className="w-full p-2 border rounded mb-2"
-            />
-            <input
-              type="text"
-              placeholder="Цена"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              className="w-full p-2 border rounded mb-2"
-            />
-            <textarea
-              placeholder="Описание"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              className="w-full p-2 border rounded mb-2"
-            />
-            <div className="flex gap-4 mt-4">
-              <button
-                onClick={() => setStep(3)}
-                className="bg-gray-500 text-white p-3 rounded"
-              >
-                Назад
-              </button>
-              <button
-                onClick={() => setStep(5)}
-                className="bg-blue-600 text-white p-3 rounded"
-              >
-                Далее
-              </button>
+            <div className="forBlur2 w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] p-6">
+              <h2 className="text-3xl mb-6">Шаг 4: Данные</h2>
+              <input
+                type="text"
+                placeholder="Год выпуска"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
+                className="w-full p-2 border rounded mb-2"
+              />
+              <input
+                type="text"
+                placeholder="Пробег"
+                value={mileage}
+                onChange={(e) => setMileage(e.target.value)}
+                className="w-full p-2 border rounded mb-2"
+              />
+              <input
+                type="text"
+                placeholder="Цена"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                className="w-full p-2 border rounded mb-2"
+              />
+              <textarea
+                placeholder="Описание"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                className="w-full p-2 border rounded mb-2"
+              />
+              <div className="flex gap-4 mt-4">
+                <button
+                  onClick={() => setStep(3)}
+                  className="bg-gray-500  p-3 rounded"
+                >
+                  Назад
+                </button>
+                <button
+                  onClick={() => setStep(5)}
+                  className="bg-blue-600  p-3 rounded"
+                >
+                  Далее
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
@@ -425,22 +431,24 @@ const AddPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="motionDiv5 flex flex-col items-center justify-center min-h-screen p-6"
+            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
-            <h2 className="text-3xl mb-6">Шаг 5: Подтверждение</h2>
-            <button
-              className="bg-[#5252ff] text-white p-3 rounded"
-              onClick={handleAdd}
-              disabled={isLoading}
-            >
-              {isLoading ? "Добавление..." : "Добавить"}
-            </button>
-            <button
-              onClick={() => setStep(4)}
-              className="mt-4 bg-gray-500 text-white p-3 rounded"
-            >
-              Назад
-            </button>
+            <div className="forBlur2 w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] p-6">
+              <h2 className="text-3xl mb-6">Шаг 5: Подтверждение</h2>
+              <button
+                className="bg-[#5252ff] p-3 rounded"
+                onClick={handleAdd}
+                disabled={isLoading}
+              >
+                {isLoading ? "Добавление..." : "Добавить"}
+              </button>
+              <button
+                onClick={() => setStep(4)}
+                className="mt-4 bg-gray-500  p-3 rounded"
+              >
+                Назад
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

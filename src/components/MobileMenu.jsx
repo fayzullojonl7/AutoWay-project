@@ -5,7 +5,7 @@ import { FiHome, FiSearch, FiUser, FiSettings, FiPlus } from "react-icons/fi";
 
 export default function MobileMenu() {
   return (
-    <div className="fixed bottom-0 w-full flex justify-between items-center px-6 py-3 bg-white dark:bg-[#2d3c60] shadow-t z-50">
+    <div className="fixed bottom-0 w-full flex justify-between items-center px-6 bg-[white] dark:bg-[#2d3c60] shadow-t z-50">
       <div className="flex gap-6">
         <Link href={"/"}>
           <button className="flex flex-col items-center">
@@ -20,7 +20,7 @@ export default function MobileMenu() {
       </div>
 
       <Link href="/AddPage">
-        <button className="bg-[#5252ff] text-white p-5 rounded-full shadow-xl -translate-y-1/2 hover:bg-blue-700 transition">
+        <button className="bg-[#5252ff] text-white p-5 rounded-full shadow-xl -translate-y-1/3 hover:bg-blue-700 transition">
           <FiPlus size={28} />
         </button>
       </Link>
