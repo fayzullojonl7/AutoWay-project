@@ -26,10 +26,12 @@ export default function MobileMenu() {
       </Link>
 
       <div className="flex gap-6">
-        <button className="flex flex-col items-center">
-          <FiUser size={24} className="cursor-pointer" />
-          <h1 className="text-[12px]">Profile</h1>
-        </button>
+        <Link href={"MyProfile"}>
+          <button className="flex flex-col items-center">
+            <FiUser size={24} className="cursor-pointer" />
+            <h1 className="text-[12px]">Profile</h1>
+          </button>
+        </Link>
         <Link href={"/WishList"}>
           <button className="flex flex-col items-center">
             <svg

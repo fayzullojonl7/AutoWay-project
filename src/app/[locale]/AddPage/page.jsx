@@ -133,7 +133,7 @@ const AddPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-[20px]">
       <AnimatePresence>
         {step === 1 && (
           <motion.div
@@ -141,7 +141,7 @@ const AddPage = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
-            className="motionDiv1 min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
+            className="motionDiv1 md:min-h-screen pt-[60px] flex  items-center justify-center  mx-auto"
           >
             <div className="forBlur2 flex items-center justify-between w-[70%] rounded-[30px] min-h-[600px] bg-white dark:bg-[#ffffff34] overflow-hidden">
               <div>
