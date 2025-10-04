@@ -11,12 +11,13 @@ const partners = [
 ];
 
 export default function PartnersMarquee() {
-
   const logos = [...partners, ...partners, ...partners];
 
   return (
     <section className="py-[50px] bg-gray-100 dark:bg-[#0f0f0f] rounded-[20px] overflow-hidden">
-      <h1 className="text-center text-[30px] font-bold mb-[30px]">OUR PARTNERS</h1>
+      <h1 className="text-center text-[30px] font-bold mb-[30px]">
+        OUR PARTNERS
+      </h1>
       <div className="relative overflow-hidden">
         <div className="flex gap-[50px] animate-marquee">
           {logos.map((logo, index) => (
