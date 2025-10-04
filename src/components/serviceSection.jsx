@@ -71,7 +71,6 @@ export default function ServiceSection() {
         <div className="absolute inset-0 bg-gray-700 animate-pulse z-10 rounded-[30px]" />
       )}
 
-      {/* Left Column - video */}
       <div className="md:w-1/2 w-full relative group bg-black flex items-center justify-center overflow-hidden">
         {inView && (
           <video
