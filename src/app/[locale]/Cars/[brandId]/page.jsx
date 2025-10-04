@@ -1,13 +1,14 @@
 "use client";
 
-import { useEffect, useState, use } from "react";
+import { use, useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
 const BASIC_URL = "http://localhost:3000/data";
 
 export default function BrandModelsPage({ params }) {
-  const { brandId } = use(params);
+  const resolvedParams = use(params); 
+  const { brandId } = resolvedParams;
 
   const [data, setData] = useState([]);
 
@@ -62,7 +63,8 @@ export default function BrandModelsPage({ params }) {
               <img
                 className="transition-transform duration-500 ease-in-out transform hover:scale-105"
                 src={model.prevImg}
-                alt=""
+                alt={model.name}
+                loading="lazy"
               />
             </div>
           </Link>
