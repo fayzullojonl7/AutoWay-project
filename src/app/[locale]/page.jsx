@@ -52,14 +52,13 @@ export default function Home() {
       className={`${className} rounded-[20px]`}
       placeholder="blur"
       blurDataURL="/images/placeholder.png"
-      priority={priority} 
+      priority={priority}
     />
   );
 
   return (
     <>
       <section className="px-[20px] md:px-[50px] pt-[80px] md:pt-[120px] pb-[40px]">
-
         <section className="md:rounded-[30px] overflow-hidden">
           <Swiper
             spaceBetween={30}

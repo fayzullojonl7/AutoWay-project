@@ -1,31 +1,51 @@
+"use client";
+
 import React, { useRef, useState, useEffect } from "react";
 
 export default function DetailingSection() {
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [inView, setInView] = useState(false);
 
+  // Intersection Observer для lazy-load
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.muted = isMuted;
-    const playPromise = v.play();
-    if (playPromise && playPromise.catch) {
-      playPromise.catch(() => {
-        setIsPlaying(false);
-      });
-    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold: 0.25 }
+    );
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    return () => {
+      if (containerRef.current) observer.unobserve(containerRef.current);
+    };
   }, []);
 
   useEffect(() => {
     const v = videoRef.current;
-    if (!v) return;
-    v.muted = isMuted;
-  }, [isMuted]);
+    if (!v || !inView) return;
 
-  const toggleMute = () => {
-    setIsMuted((m) => !m);
-  };
+    v.muted = isMuted;
+
+    const handleLoadedData = () => setLoaded(true);
+    v.addEventListener("loadeddata", handleLoadedData);
+
+    const playPromise = v.play();
+    if (playPromise && playPromise.catch) {
+      playPromise.catch(() => setIsPlaying(false));
+    } else {
+      setIsPlaying(true);
+    }
+
+    return () => v.removeEventListener("loadeddata", handleLoadedData);
+  }, [inView, isMuted]);
+
+  const toggleMute = () => setIsMuted((m) => !m);
 
   const togglePlay = async () => {
     const v = videoRef.current;
@@ -44,8 +64,15 @@ export default function DetailingSection() {
   };
 
   return (
-    <section className="w-full h-[85vh] flex flex-col md:flex-row bg-gray-900 text-white rounded-[30px] overflow-hidden">
-      <div className="md:w-1/2 w-full flex items-end md:items-center p-8 md:p-16 bg-gradient-to-b from-transparent to-black">
+    <section
+      ref={containerRef}
+      className="w-full h-[85vh] flex flex-col md:flex-row bg-gray-900 text-white rounded-[30px] overflow-hidden relative"
+    >
+      {!loaded && (
+        <div className="absolute inset-0 bg-gray-700 animate-pulse z-10 rounded-[30px]" />
+      )}
+
+      <div className="md:w-1/2 w-full flex items-end md:items-center p-8 md:p-16 bg-gradient-to-b from-transparent to-black z-20">
         <div className="max-w-xl">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-2">
             Premium Car Detailing
@@ -66,32 +93,34 @@ export default function DetailingSection() {
               Book a Detailing Session
             </a>
             <button
-              className="inline-block px-4 py-3 border border-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition"
+              className="inline-block px-4 py-3 border boaddrder-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition"
               onClick={() => {
                 const el = document.querySelector("#booking");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              View Pricing
+              a View Pricing
             </button>
           </div>
         </div>
       </div>
 
       <div className="md:w-1/2 w-full relative group bg-black flex items-center justify-center overflow-hidden">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover"
-          src="/images/pages/home/videos/AQO1dAgzU3433TCCPVSKLqzF4VOJcwX2aU4ZSQ5WzBGKEfoRSdJavXyaxQfCpZd.mp4"
-          poster="/images/detailing-poster.jpg"
-          playsInline
-          loop
-          muted
-        />
+        {inView && (
+          <video
+            ref={videoRef}
+            className="w-full h-full object-cover rounded-[30px]"
+            src="/images/pages/home/videos/AQO1dAgzU3433TCCPVSKLqzF4VOJcwX2aU4ZSQ5WzBGKEfoRSdJavXyaxQfCpZd.mp4"
+            poster="/images/detailing-poster.jpg"
+            playsInline
+            loop
+            muted={isMuted}
+          />
+        )}
 
-        <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent pointer-events-none z-20" />
 
-        <div className="absolute left-6 bottom-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+        <div className="absolute left-6 bottom-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-30">
           <div className="flex items-center gap-3 bg-black/50 backdrop-blur-sm rounded-full p-2">
             <button
               onClick={togglePlay}
@@ -134,7 +163,6 @@ export default function DetailingSection() {
               className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             >
               {isMuted ? (
-                // muted icon
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5"
@@ -155,7 +183,6 @@ export default function DetailingSection() {
                   />
                 </svg>
               ) : (
-                // sound on
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5"
@@ -181,29 +208,6 @@ export default function DetailingSection() {
             <span className="px-3 text-xs text-gray-200/80">
               Hover Controls
             </span>
-          </div>
-        </div>
-
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="opacity-0 group-hover:opacity-60 transition-opacity duration-300">
-            {!isPlaying ? (
-              <div className="w-28 h-28 rounded-full bg-black/40 flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-12 h-12 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 9v6m4-6v6"
-                  />
-                </svg>
-              </div>
-            ) : null}
           </div>
         </div>
       </div>
