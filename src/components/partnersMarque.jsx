@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+
 const partners = [
   "/images/pages/home/brands/BMW-logo.png",
   "/images/pages/home/brands/MERC-logo.png",
@@ -8,21 +11,20 @@ const partners = [
 ];
 
 export default function PartnersMarquee() {
-  // Дублируем массив 3 раза для плавного бесконечного эффекта
+
   const logos = [...partners, ...partners, ...partners];
 
   return (
     <section className="py-[50px] bg-gray-100 dark:bg-[#0f0f0f] rounded-[20px] overflow-hidden">
-      <h1 className="text-center text-[30px] font-bold mb-[30px]">
-        OUR PARTNERS
-      </h1>
-      <div className="relative">
+      <h1 className="text-center text-[30px] font-bold mb-[30px]">OUR PARTNERS</h1>
+      <div className="relative overflow-hidden">
         <div className="flex gap-[50px] animate-marquee">
           {logos.map((logo, index) => (
             <img
               key={index}
               src={logo}
-              alt={`partner-${index}`}
+              alt={`Partner logo ${index + 1}`}
+              loading="lazy"
               className="h-[60px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
             />
           ))}
