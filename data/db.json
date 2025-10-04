@@ -687,7 +687,132 @@
         "id": 4,
         "name": "Detailing",
         "categoryImage": "/images/pages/home/categories/detCat.png",
-        "brands": []
+        "detailings": [
+          {
+            "id": 1,
+            "name": "Royale Detailing",
+            "avatar": "/images/pages/home/detailing/detailingLogo/ROYALE-logo.png",
+            "services": [
+              {
+                "id": 1,
+                "title": "Premium Exterior Wash",
+                "description": "Глубокая очистка кузова с защитным покрытием.",
+                "cardCover": "/images/pages/home/detailing/Royale/Moyka.png",
+                "phone": "+992-985-10-34-00",
+                "price": "15",
+                "images": [""]
+              },
+              {
+                "id": 2,
+                "title": "Leather Care",
+                "description": "Очистка и уход за кожаным салоном.",
+                "cardCover": "/images/pages/home/detailing/Royale/Ximchistka.png",
+                "phone": "+992-985-10-34-00",
+                "price": "300",
+                "images": [
+                  "/images/pages/home/detailing/Royale/ximchistka1.png",
+                  "/images/pages/home/detailing/Royale/ximchistka2.png",
+                  "/images/pages/home/detailing/Royale/ximchistka3.png"
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Scratch Removal",
+                "description": "Удаление мелких царапин на кузове.",
+                "cardCover": "/images/pages/home/detailing/Royale/Palirovka.png",
+                "phone": "+992-985-10-34-00",
+                "price": "500",
+                "images": [
+                  "/images/pages/home/detailing/Royale/palirovka1.png",
+                  "/images/pages/home/detailing/Royale/palirovka2.png",
+                  "/images/pages/home/detailing/Royale/palirovka3.png",
+                  "/images/pages/home/detailing/Royale/palirovka4.png"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "58-Detailing",
+            "avatar": "/images/pages/home/detailing/detailingLogo/58-logo.png",
+            "services": [
+              {
+                "id": 1,
+                "title": "Interior Deep Cleaning",
+                "description": "Полная химчистка салона и ковров.",
+                "image": "/images/pages/home/detailings/services/interior.png",
+                "phone": "+992-009-12-33-21"
+              },
+              {
+                "id": 2,
+                "title": "Leather Care",
+                "description": "Очистка и уход за кожаным салоном.",
+                "image": "/images/pages/home/detailings/services/leather.png",
+                "phone": "+992-009-12-33-21"
+              },
+              {
+                "id": 3,
+                "title": "Odor Elimination",
+                "description": "Удаление неприятных запахов озонатором.",
+                "image": "/images/pages/home/detailings/services/odor.png",
+                "phone": "+992-009-12-33-21"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Letech Detailing",
+            "avatar": "/images/pages/home/detailing/detailingLogo/Letech-logo.png",
+            "services": [
+              {
+                "id": 1,
+                "title": "Ceramic Coating",
+                "description": "Керамическая защита кузова сроком до 3 лет.",
+                "image": "/images/pages/home/detailings/services/ceramic.png",
+                "phone": "+992-009-12-33-21"
+              },
+              {
+                "id": 2,
+                "title": "Polishing & Waxing",
+                "description": "Многоступенчатая полировка и воск.",
+                "image": "/images/pages/home/detailings/services/polish.png",
+                "phone": "+992-009-12-33-21"
+              },
+              {
+                "id": 3,
+                "title": "Wheel & Tire Detailing",
+                "description": "Чистка и защита шин и дисков.",
+                "image": "/images/pages/home/detailings/services/wheels.png",
+                "phone": "+992-009-12-33-21"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Nek Detailing",
+            "avatar": "/images/pages/home/detailing/detailingLogo/NEK-logo.png",
+            "services": [
+              {
+                "id": 1,
+                "title": "Ceramic Coating",
+                "description": "Керамическая защита кузова сроком до 3 лет.",
+                "image": "/images/pages/home/detailings/services/ceramic.png"
+              },
+              {
+                "id": 2,
+                "title": "Polishing & Waxing",
+                "description": "Многоступенчатая полировка и воск.",
+                "image": "/images/pages/home/detailings/services/polish.png"
+              },
+              {
+                "id": 3,
+                "title": "Wheel & Tire Detailing",
+                "description": "Чистка и защита шин и дисков.",
+                "image": "/images/pages/home/detailings/services/wheels.png"
+              }
+            ]
+          }
+        ]
       },
       {
         "id": 2,

@@ -38,10 +38,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="px-[20px] md:px-[50px] pt-[80px] md:pt-[150px] pb-[40px]">
-        {/* HERO SECTION */}
-
-        <section className="md:ounded-[30px] overflow-hidden">
+      <section className="px-[20px] md:px-[50px] pt-[80px] md:pt-[120px] pb-[40px]">
+        <section className="md:rounded-[30px] overflow-hidden">
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -56,7 +54,7 @@ export default function Home() {
             className="mySwiper"
           >
             <SwiperSlide>
-              <section className="md:h-[700px] relative">
+              <section className="md:h-[650px] relative">
                 <img
                   src="/images/pages/home/Swiper1/Slide1.png"
                   alt="m5"
@@ -75,7 +73,7 @@ export default function Home() {
               </section>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="md:h-[700px] relative">
+              <section className="md:h-[650px] relative">
                 <img
                   src="/images/pages/home/Swiper1/Slide2.png"
                   alt="m5"
@@ -94,7 +92,7 @@ export default function Home() {
               </section>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="md:h-[700px] relative">
+              <section className="md:h-[650px] relative">
                 <img
                   src="/images/pages/home/Swiper1/Slide3.png"
                   alt="m5"
@@ -113,7 +111,7 @@ export default function Home() {
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <section className="md:h-[700px] relative">
+              <section className="md:h-[650px] relative">
                 <img
                   src="/images/pages/home/Swiper1/Slide4.png"
                   alt="m5"
