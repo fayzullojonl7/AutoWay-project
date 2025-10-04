@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import axios from "axios";
 
-const BASIC_URL = "http://localhost:3000/data"; // путь к твоему db.json
+const BASIC_URL = "http://localhost:3000/data"; 
 
 export default function ServiceDetailPage() {
   const params = useParams();
@@ -55,7 +55,7 @@ export default function ServiceDetailPage() {
     fetchData();
   }, [detById, id]);
 
-  // Skeleton для изображения и превью
+
   if (loading)
     return (
       <section className="p-6 pt-[100px] px-[20px] md:px-[50px] mx-auto">
