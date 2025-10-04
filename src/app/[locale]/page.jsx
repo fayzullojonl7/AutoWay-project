@@ -159,11 +159,21 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="py-[50px] bg-gray-100 dark:bg-[#0f0f0f] rounded-[20px] px-[30px]">
-          <h1 className="text-center text-[30px] font-bold mb-[20px]">
+
+        <section
+          className="py-[50px] bg-gray-100 dark:bg-[#0f0f0f] rounded-[20px] px-[30px]"
+          style={{ minHeight: "220px" }}
+        >
+          <h1
+            className="text-center text-[30px] font-bold mb-[20px]"
+            style={{ lineHeight: 1.2 }}
+          >
             ABOUT US
           </h1>
-          <p className="text-center text-[18px] text-gray-600 dark:text-gray-300 max-w-[800px] mx-auto">
+          <p
+            className="text-center text-[18px] text-gray-600 dark:text-gray-300 max-w-[800px] mx-auto"
+            style={{ minHeight: "72px", lineHeight: 1.5 }}
+          >
             We are passionate about bringing the most exclusive and premium cars
             to our clients. Our mission is simple: help you find your dream car
             with comfort, trust, and elegance.
