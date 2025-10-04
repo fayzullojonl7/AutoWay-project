@@ -59,7 +59,7 @@ export default function ServiceDetailPage() {
   if (!service) return <p className="p-6 text-center">Service not found!</p>;
 
   return (
-    <section className="p-6 pt-[100px] max-w-6xl mx-auto">
+    <section className="p-6 pt-[100px] px-[20px] md:px-[50px] mx-auto">
       <Link
         href={`/Detailing/${params.detById}`}
         className="text-blue-500 hover:underline"
@@ -104,7 +104,7 @@ export default function ServiceDetailPage() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 md:gap-0 md:flex-row">
+          <div className="flex flex-col gap-4 md:gap-[20px] md:flex-row">
             <div className="flex-1 bg-[#f3f3f3] dark:bg-[#ffffff14] p-4 rounded-lg shadow-sm">
               <h3 className="font-bold mb-2 text-[20px]">Price</h3>
               <p>${service.price || "N/A"}</p>

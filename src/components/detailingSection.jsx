@@ -1,9 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 
-// DetailingSection.jsx
-// Use this component in your project: import DetailingSection from "./DetailingSection";
-// Replace the video src with your own (e.g., /videos/detailing.mp4)
-
 export default function DetailingSection() {
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
@@ -49,7 +45,6 @@ export default function DetailingSection() {
 
   return (
     <section className="w-full h-[85vh] flex flex-col md:flex-row bg-gray-900 text-white rounded-[30px] overflow-hidden">
-      {/* Left Column */}
       <div className="md:w-1/2 w-full flex items-end md:items-center p-8 md:p-16 bg-gradient-to-b from-transparent to-black">
         <div className="max-w-xl">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-2">
@@ -83,7 +78,6 @@ export default function DetailingSection() {
         </div>
       </div>
 
-      {/* Right Column - video with hover controls */}
       <div className="md:w-1/2 w-full relative group bg-black flex items-center justify-center overflow-hidden">
         <video
           ref={videoRef}
@@ -97,7 +91,6 @@ export default function DetailingSection() {
 
         <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent pointer-events-none" />
 
-        {/* Controls - appear on hover */}
         <div className="absolute left-6 bottom-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
           <div className="flex items-center gap-3 bg-black/50 backdrop-blur-sm rounded-full p-2">
             <button
@@ -191,7 +184,6 @@ export default function DetailingSection() {
           </div>
         </div>
 
-        {/* Optional: center pause icon when hovered */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="opacity-0 group-hover:opacity-60 transition-opacity duration-300">
             {!isPlaying ? (

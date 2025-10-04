@@ -41,8 +41,26 @@ export default function DetByIdPage() {
     return <p className="p-6 text-red-500">Детейлинг не найден</p>;
 
   return (
-    <div className="pt-[100px] px-[50px]">
+    <div className="pt-[100px] px-[20px] md:px-[50px]">
       <div className="flex items-center  gap-4 mb-6">
+        <Link href={`/Detailing`}>
+          <button className=" text-white rounded-lg hover:bg-[#5252ffb1]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+              />
+            </svg>
+          </button>
+        </Link>
         {detailing.avatar && (
           <img
             src={detailing.avatar}
@@ -60,7 +78,7 @@ export default function DetByIdPage() {
             key={service.id}
             href={`/Detailing/${detailing.id}/${service.id}`}
           >
-            <div className="w-[100%] md:w-[300px] rounded-[20px] overflow-hidden shadow-md bg-white dark:bg-[#ffffff14] relative transition hover:shadow-lg">
+            <div className="w-[350px] md:w-[300px] rounded-[20px] overflow-hidden shadow-md bg-white dark:bg-[#ffffff14] relative transition hover:shadow-lg">
               {service.label && (
                 <div
                   className={`absolute top-[20px] left-[20px] px-3 py-1 rounded-[30px] text-white text-sm font-bold ${

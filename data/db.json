@@ -700,7 +700,11 @@
                 "cardCover": "/images/pages/home/detailing/Royale/Moyka.png",
                 "phone": "+992-985-10-34-00",
                 "price": "15",
-                "images": [""]
+                "images": [
+                  "/images/pages/home/detailing/Royale/moyka1.png",
+                  "https://i.pinimg.com/736x/bb/e4/d7/bbe4d7428920e26e578dec869d49a9b8.jpg",
+                  "https://i.pinimg.com/1200x/fd/ca/72/fdca72d5165ba813bebfe33efad1e57c.jpg"
+                ]
               },
               {
                 "id": 2,
