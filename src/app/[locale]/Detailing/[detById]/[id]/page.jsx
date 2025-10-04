@@ -55,7 +55,33 @@ export default function ServiceDetailPage() {
     fetchData();
   }, [detById, id]);
 
-  if (loading) return <p className="p-6 text-center">Loading...</p>;
+  // Skeleton для изображения и превью
+  if (loading)
+    return (
+      <section className="p-6 pt-[100px] px-[20px] md:px-[50px] mx-auto">
+        <div className="animate-pulse flex flex-col md:flex-row gap-6">
+          <div className="flex-1">
+            <div className="rounded-[20px] bg-gray-300 dark:bg-gray-700 h-64 md:h-96 mb-3" />
+            <div className="flex gap-2 overflow-x-auto">
+              {Array.from({ length: 4 }).map((_, idx) => (
+                <div
+                  key={idx}
+                  className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg bg-gray-300 dark:bg-gray-700"
+                />
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 flex flex-col gap-4">
+            <div className="bg-gray-300 dark:bg-gray-700 rounded-[20px] shadow-md p-6 h-40 mb-4" />
+            <div className="flex flex-col gap-4 md:gap-[20px] md:flex-row">
+              <div className="flex-1 bg-gray-300 dark:bg-gray-700 p-4 rounded-lg shadow-sm h-20" />
+              <div className="flex-1 bg-gray-300 dark:bg-gray-700 p-4 rounded-lg shadow-sm h-20" />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
   if (!service) return <p className="p-6 text-center">Service not found!</p>;
 
   return (
@@ -73,6 +99,7 @@ export default function ServiceDetailPage() {
             <img
               src={activeImage}
               alt={service.title}
+              loading="lazy"
               className="w-full h-64 md:h-96 object-cover transition-transform duration-300 ease-in-out hover:scale-105"
             />
           </div>
@@ -89,6 +116,7 @@ export default function ServiceDetailPage() {
                 <img
                   src={img}
                   alt={`Preview ${idx + 1}`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
