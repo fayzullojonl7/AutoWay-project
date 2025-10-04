@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -57,6 +58,39 @@ const featuredCars = [
 ];
 
 export default function FeaturedCarsSwiper() {
+  const [loadedImages, setLoadedImages] = useState({});
+  const refs = useRef({});
+
+  const handleImageLoad = (id) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.dataset.id;
+            const img = new Image();
+            img.src = featuredCars.find((c) => c.id === +id).image;
+            img.onload = () => handleImageLoad(+id);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+
+    Object.values(refs.current).forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      Object.values(refs.current).forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, []);
+
   return (
     <section className="py-20 bg-[#f8f8f8] dark:bg-[#0f0f0f]">
       <div className="max-w-[1500px] mx-auto px-4">
@@ -81,14 +115,28 @@ export default function FeaturedCarsSwiper() {
           {featuredCars.map((car) => (
             <SwiperSlide key={car.id}>
               <div
-                className="relative w-[300px] h-[400px] rounded-[30px] overflow-hidden shadow-lg mx-auto transition-transform duration-300 "
-                style={{
-                  backgroundImage: `url(${car.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
+                ref={(el) => (refs.current[car.id] = el)}
+                data-id={car.id}
+                className="relative w-[300px] h-[400px] rounded-[30px] overflow-hidden shadow-lg mx-auto transition-transform duration-300"
+                aria-label={`${car.name}, ${car.brand}, priced at ${car.price}`}
               >
-                <div className="absolute bottom-0 left-0 w-full h-[22%] bg-gradient-to-t from-black/85 via-black/50 to-transparent backdrop-blur-md p-6 flex flex-col justify-end">
+                {!loadedImages[car.id] && (
+                  <div className="absolute inset-0 bg-gray-300 animate-pulse rounded-[30px] z-10" />
+                )}
+
+                <div
+                  className="absolute inset-0 rounded-[30px] transition-opacity duration-500"
+                  style={{
+                    opacity: loadedImages[car.id] ? 1 : 0,
+                    backgroundImage: loadedImages[car.id]
+                      ? `url(${car.image})`
+                      : "none",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
+
+                <div className="absolute bottom-0 left-0 w-full h-[22%] bg-gradient-to-t from-black/85 via-black/50 to-transparent backdrop-blur-md p-6 flex flex-col justify-end z-20">
                   <h2 className="text-white text-xl font-bold tracking-wide drop-shadow-md">
                     {car.name}
                   </h2>
