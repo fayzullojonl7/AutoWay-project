@@ -36,8 +36,14 @@ export default function Home() {
     getData();
   }, []);
 
-  // LazyImage с SSR-friendly опцией
-  const LazyImage = ({ src, alt, className, width, height, priority = false }) => (
+  const LazyImage = ({
+    src,
+    alt,
+    className,
+    width,
+    height,
+    priority = false,
+  }) => (
     <Image
       src={src}
       alt={alt}
@@ -46,14 +52,14 @@ export default function Home() {
       className={`${className} rounded-[20px]`}
       placeholder="blur"
       blurDataURL="/images/placeholder.png"
-      priority={priority} // для первых слайдов
+      priority={priority} 
     />
   );
 
   return (
     <>
       <section className="px-[20px] md:px-[50px] pt-[80px] md:pt-[120px] pb-[40px]">
-        {/* SWIPER */}
+
         <section className="md:rounded-[30px] overflow-hidden">
           <Swiper
             spaceBetween={30}
@@ -121,7 +127,11 @@ export default function Home() {
                   />
                   <Link href={slide.href}>
                     <button
-                      className={`absolute z-[2] w-[150px] h-[53px] md:w-[160px] md:h-[63px] font-bold rounded-[30px] ${slide.buttonStyles} ${slide.top || ""} ${slide.left || ""} ${slide.right || ""}`}
+                      className={`absolute z-[2] w-[150px] h-[53px] md:w-[160px] md:h-[63px] font-bold rounded-[30px] ${
+                        slide.buttonStyles
+                      } ${slide.top || ""} ${slide.left || ""} ${
+                        slide.right || ""
+                      }`}
                     >
                       {slide.buttonText}
                     </button>
@@ -132,7 +142,6 @@ export default function Home() {
           </Swiper>
         </section>
 
-        {/* CATEGORIES */}
         <section className="flex flex-col gap-[30px] py-[50px]">
           <h1 className="text-center text-[30px] font-bold">CATEGORIES</h1>
           <div className="flex flex-wrap gap-[15px]">
@@ -143,7 +152,7 @@ export default function Home() {
                   <LazyImage
                     src={cat.categoryImage}
                     alt={cat.name}
-                    width={200}
+                    width={300}
                     height={100}
                   />
                 </div>
@@ -151,10 +160,10 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        {/* ABOUT */}
         <section className="py-[50px] bg-gray-100 dark:bg-[#0f0f0f] rounded-[20px] px-[30px]">
-          <h1 className="text-center text-[30px] font-bold mb-[20px]">ABOUT US</h1>
+          <h1 className="text-center text-[30px] font-bold mb-[20px]">
+            ABOUT US
+          </h1>
           <p className="text-center text-[18px] text-gray-600 dark:text-gray-300 max-w-[800px] mx-auto">
             We are passionate about bringing the most exclusive and premium cars
             to our clients. Our mission is simple: help you find your dream car
@@ -175,7 +184,9 @@ export default function Home() {
         </section>
 
         <section className="py-[50px]">
-          <h1 className="text-center text-[30px] font-bold mb-[20px]">CONTACT US</h1>
+          <h1 className="text-center text-[30px] font-bold mb-[20px]">
+            CONTACT US
+          </h1>
           <div className="flex flex-col md:flex-row justify-between gap-[20px] max-w-[1000px] mx-auto">
             <div className="flex-1 bg-white dark:bg-[#1d1d1d] rounded-[20px] p-[20px] shadow-md">
               <h2 className="font-bold text-[20px] mb-[10px]">Visit Us</h2>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -41,6 +41,18 @@ const reviews = [
 ];
 
 export default function ClientReviews() {
+  const [loaded, setLoaded] = useState({});
+
+  useEffect(() => {
+    reviews.forEach((review) => {
+      const img = new Image();
+      img.src = review.image;
+      img.onload = () => {
+        setLoaded((prev) => ({ ...prev, [review.id]: true }));
+      };
+    });
+  }, []);
+
   return (
     <section className="py-20 bg-[#f8f8f8] dark:bg-[#0f0f0f]">
       <div className="max-w-[1300px] mx-auto px-4">
@@ -61,14 +73,22 @@ export default function ClientReviews() {
         >
           {reviews.map((review) => (
             <SwiperSlide key={review.id}>
-              <div
-                className="relative w-[90%] sm:w-[350px] h-[450px] rounded-[30px] overflow-hidden shadow-lg mx-auto transition-transform duration-300 hover:scale-[1.03]"
-                style={{
-                  backgroundImage: `url(${review.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
+              <div className="relative w-[90%] sm:w-[350px] h-[450px] rounded-[30px] overflow-hidden shadow-lg mx-auto transition-transform duration-300 hover:scale-[1.03]">
+                {!loaded[review.id] && (
+                  <div className="absolute inset-0 bg-gray-300 dark:bg-gray-700 animate-pulse" />
+                )}
+
+                {loaded[review.id] && (
+                  <div
+                    className="absolute inset-0 transition-opacity duration-500"
+                    style={{
+                      backgroundImage: `url(${review.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  />
+                )}
+
                 <div className="absolute bottom-0 left-0 w-full h-[30%] bg-gradient-to-t from-black/80 via-black/30 to-transparent backdrop-blur-md p-6 flex flex-col justify-end">
                   <h3 className="text-white text-lg font-semibold tracking-wide drop-shadow-sm">
                     {review.name}
