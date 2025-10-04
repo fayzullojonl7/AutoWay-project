@@ -1,13 +1,19 @@
-import jsonServer from "json-server";
 import path from "path";
-
-const router = jsonServer.router(path.join(process.cwd(), "data/db.json"));
-const middlewares = jsonServer.defaults();
+import fs from "fs";
 
 export default function handler(req, res) {
-  const server = jsonServer.create();
-  server.use(middlewares);
-  server.use(router);
+  try {
+    const filePath = path.join(process.cwd(), "data/db.json");
+    const jsonData = fs.readFileSync(filePath, "utf-8");
+    const data = JSON.parse(jsonData);
 
-  server(req, res);
+    // Если хочешь, чтобы маршрут /cars работал
+    if (req.url === "/cars") {
+      res.status(200).json(data.cars);
+    } else {
+      res.status(200).json(data);
+    }
+  } catch (err) {
+    res.status(500).json({ error: "Failed to load JSON" });
+  }
 }
