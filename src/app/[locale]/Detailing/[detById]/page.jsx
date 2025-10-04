@@ -36,13 +36,34 @@ export default function DetByIdPage() {
     if (detById) getDetailing();
   }, [detById]);
 
-  if (loading) return <p className="p-6">Загрузка...</p>;
+  // Skeleton count
+  const skeletonCount = 4;
+
+  if (loading)
+    return (
+      <div className="pt-[100px] px-[20px] md:px-[50px] flex flex-wrap gap-[20px] justify-center">
+        {Array.from({ length: skeletonCount }).map((_, idx) => (
+          <div
+            key={idx}
+            className="w-[350px] md:w-[300px] rounded-[20px] overflow-hidden shadow-md bg-white dark:bg-[#ffffff14] animate-pulse"
+          >
+            <div className="md:h-[318px] h-[230px] bg-gray-300 dark:bg-gray-700" />
+            <div className="p-[20px] space-y-3">
+              <div className="h-6 w-3/4 bg-gray-300 dark:bg-gray-700 rounded" />
+              <div className="h-4 w-full bg-gray-300 dark:bg-gray-700 rounded" />
+              <div className="h-4 w-1/2 bg-gray-300 dark:bg-gray-700 rounded" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+
   if (!detailing)
     return <p className="p-6 text-red-500">Детейлинг не найден</p>;
 
   return (
     <div className="pt-[100px] px-[20px] md:px-[50px]">
-      <div className="flex items-center  gap-4 mb-6">
+      <div className="flex items-center gap-4 mb-6">
         <Link href={`/Detailing`}>
           <button className=" text-white rounded-lg hover:bg-[#5252ffb1]">
             <svg
@@ -65,6 +86,7 @@ export default function DetByIdPage() {
           <img
             src={detailing.avatar}
             alt={detailing.name}
+            loading="lazy"
             className="w-16 h-16 rounded-full"
           />
         )}
@@ -94,7 +116,8 @@ export default function DetByIdPage() {
                   <img
                     src={service.cardCover}
                     alt={service.title}
-                    className=" w-[100%] h-[100%] object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                    loading="lazy"
+                    className="w-[100%] h-[100%] object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                   />
                 </div>
               )}
@@ -115,6 +138,7 @@ export default function DetByIdPage() {
                         <img
                           src={detailing.avatar}
                           alt={detail.label}
+                          loading="lazy"
                           className="w-[20px] h-[20px] transition-transform duration-300 ease-in-out hover:scale-110"
                         />
                         <p className="text-sm">{detail.label}</p>
