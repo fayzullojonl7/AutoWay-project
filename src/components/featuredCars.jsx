@@ -113,7 +113,7 @@ export default function FeaturedCarsSwiper() {
           }}
         >
           {featuredCars.map((car) => (
-            <SwiperSlide key={car.id}>
+            <SwiperSlide key={car.id} className="md:py-[50px]">
               <div
                 ref={(el) => (refs.current[car.id] = el)}
                 data-id={car.id}
