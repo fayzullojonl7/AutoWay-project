@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import axios from "axios";
 
-const BASIC_URL = "http://localhost:3000/data"; 
+const BASIC_URL = "http://localhost:3000/data";
 
 export default function ServiceDetailPage() {
   const params = useParams();
@@ -54,7 +54,6 @@ export default function ServiceDetailPage() {
 
     fetchData();
   }, [detById, id]);
-
 
   if (loading)
     return (

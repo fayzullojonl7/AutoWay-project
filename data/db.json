@@ -199,17 +199,20 @@
               {
                 "id": 1,
                 "name": "Astra",
-                "images": []
+                "prevImg": "/images/pages/home/models/BMW/M5.png",
+                "vehicles": []
               },
               {
                 "id": 2,
                 "name": "Vectra",
-                "images": []
+                "prevImg": "/images/pages/home/models/BMW/M5.png",
+                "vehicles": []
               },
               {
                 "id": 3,
                 "name": "Insignia",
-                "images": []
+                "prevImg": "/images/pages/home/models/BMW/M5.png",
+                "vehicles": []
               }
             ]
           },
@@ -220,18 +223,39 @@
             "models": [
               {
                 "id": 1,
-                "name": "S-class",
-                "images": []
+                "name": "C-class",
+                "prevImg": "/images/pages/home/models/MERC/C-class.png",
+                "vehicles": []
               },
               {
                 "id": 2,
-                "name": "E-cllas",
-                "images": []
+                "name": "E-class",
+                "prevImg": "/images/pages/home/models/MERC/E-class.png",
+                "vehicles": []
               },
               {
                 "id": 3,
+                "name": "S-class",
+                "prevImg": "/images/pages/home/models/MERC/S-class.png",
+                "vehicles": []
+              },
+              {
+                "id": 4,
+                "name": "GL-cllas",
+                "prevImg": "/images/pages/home/models/MERC/ML-class.png",
+                "vehicles": []
+              },
+              {
+                "id": 5,
+                "name": "GLS-class",
+                "prevImg": "/images/pages/home/models/MERC/GLS-class.png",
+                "vehicles": []
+              },
+              {
+                "id": 6,
                 "name": "G-class",
-                "images": []
+                "prevImg": "/images/pages/home/models/MERC/G -class.png",
+                "vehicles": []
               }
             ]
           },

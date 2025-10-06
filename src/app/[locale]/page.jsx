@@ -143,17 +143,29 @@ export default function Home() {
 
         <section className="flex flex-col gap-[30px] py-[50px]">
           <h1 className="text-center text-[30px] font-bold">CATEGORIES</h1>
-          <div className="flex flex-wrap gap-[15px]">
+          <div className="flex flex-wrap justify-center gap-[15px]">
             {data?.categories?.map((cat) => (
               <Link href={cat.name} key={cat.id}>
-                <div className="dark:shadow-md bg-white dark:bg-[#ffffff1d] flex flex-col p-[20px] text-[30px] overflow-hidden rounded-[20px] h-[200px] w-[350px] md:w-[330px] justify-between shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
-                  <h1 className="font-bold">{cat.name}</h1>
-                  <LazyImage
-                    src={cat.categoryImage}
-                    alt={cat.name}
-                    width={300}
-                    height={100}
-                  />
+                <div className="dark:shadow-md bg-white dark:bg-[#ffffff1d] flex flex-col p-[8px] md:p-[20px] text-[30px] overflow-hidden rounded-[10px] md:rounded-[20px] h-[100px] md:h-[200px] w-[165px] md:w-[330px] justify-center md:justify-between shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+                  <h1 className="font-bold md:text-[30px] text-[20px]">
+                    {cat.name}
+                  </h1>
+                  <div className="hidden md:flex">
+                    <LazyImage
+                      src={cat.categoryImage}
+                      alt={cat.name}
+                      width={300}
+                      height={100}
+                    />
+                  </div>
+                  <div className="flex justify-center items-center  md:hidden">
+                    <LazyImage
+                      src={cat.categoryImage}
+                      alt={cat.name}
+                      width={150}
+                      height={120}
+                    />
+                  </div>
                 </div>
               </Link>
             ))}

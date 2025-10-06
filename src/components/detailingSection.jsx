@@ -109,7 +109,7 @@ export default function DetailingSection() {
         {inView && (
           <video
             ref={videoRef}
-            className="w-full h-full object-cover rounded-[30px]"
+            className="w-full h-full object-cover "
             src="/images/pages/home/videos/AQO1dAgzU3433TCCPVSKLqzF4VOJcwX2aU4ZSQ5WzBGKEfoRSdJavXyaxQfCpZd.mp4"
             poster="/images/detailing-poster.jpg"
             playsInline
