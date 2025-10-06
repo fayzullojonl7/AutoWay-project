@@ -103,7 +103,11 @@ export default function ServiceSection() {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 9v6m4-6v6" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10 9v6m4-6v6"
+                  />
                 </svg>
               ) : (
                 <svg
@@ -133,8 +137,16 @@ export default function ServiceSection() {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11 5L6 9H2v6h4l5 4V5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M23 9l-6 6M17 9l6 6" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11 5L6 9H2v6h4l5 4V5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M23 9l-6 6M17 9l6 6"
+                  />
                 </svg>
               ) : (
                 <svg
@@ -145,13 +157,23 @@ export default function ServiceSection() {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11 5L6 9H2v6h4l5 4V5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a9 9 0 010 14.14" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11 5L6 9H2v6h4l5 4V5z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a9 9 0 010 14.14"
+                  />
                 </svg>
               )}
             </button>
 
-            <span className="px-3 text-xs text-gray-200/80">Hover Controls</span>
+            <span className="px-3 text-xs text-gray-200/80">
+              Hover Controls
+            </span>
           </div>
         </div>
       </div>
@@ -165,17 +187,20 @@ export default function ServiceSection() {
             Reliable maintenance & professional repair
           </h2>
           <p className="text-sm md:text-base text-gray-200 mb-6">
-            From routine maintenance to complex repairs, our certified experts ensure your car receives the best treatment. Using genuine parts, modern tools, and years of expertise — we keep your vehicle in top condition.
+            From routine maintenance to complex repairs, our certified experts
+            ensure your car receives the best treatment. Using genuine parts,
+            modern tools, and years of expertise — we keep your vehicle in top
+            condition.
           </p>
           <div className="flex items-center gap-4">
             <a
               href="#booking"
-              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold shadow-lg transition"
+              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold shadow-lg transition text-[13px] md:text-[20px]"
             >
               Book a Service
             </a>
             <button
-              className="inline-block px-4 py-3 border border-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition"
+              className="inline-block px-4 py-3 border border-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition text-[13px] md:text-[20px]"
               onClick={() => {
                 const el = document.querySelector("#booking");
                 if (el) el.scrollIntoView({ behavior: "smooth" });

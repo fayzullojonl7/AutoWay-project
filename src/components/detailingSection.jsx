@@ -88,18 +88,18 @@ export default function DetailingSection() {
           <div className="flex items-center gap-4">
             <a
               href="#booking"
-              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold shadow-lg transition"
+              className="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-2xl font-semibold shadow-lg transition text-[13px] md:text-[20px]"
             >
-              Book a Detailing Session
+              Book a Session
             </a>
             <button
-              className="inline-block px-4 py-3 border boaddrder-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition"
+              className="inline-block px-4 py-3 border boaddrder-indigo-500 rounded-2xl font-medium hover:bg-white/5 transition text-[13px] md:text-[20px]"
               onClick={() => {
                 const el = document.querySelector("#booking");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              a View Pricing
+              View Pricing
             </button>
           </div>
         </div>
